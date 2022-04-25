@@ -17,7 +17,7 @@ function getInfo() {
 		// check is user input matches username and password of a current index of the objPeople array
 		if (username == objPeople[i].username && password == objPeople[i].password) {
 			localStorage.setItem("username",username) //ส่งค่า Username
-			window.location.href = './index.html'
+			window.location.href = './home.html'
 			return 
 		}
 	}
