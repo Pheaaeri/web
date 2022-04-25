@@ -28,19 +28,19 @@
 //     localStorage.removeItem("jwt");
 //     window.location.href = './login.html'
 // }
-function checkLogin(){
-    var username = localStorage.getItem("username")
-    if(!username){
-        window.location = "login.html"
-    }
-    else{
-        document.getElementById("name").innerHTML = username
-    }
+// function checkLogin(){
+//     var username = localStorage.getItem("username")
+//     if(!username){
+//         window.location = "login.html"
+//     }
+//     else{
+//         document.getElementById("name").innerHTML = username
+//     }
 
 
-}
+// }
 
-document.getElementById("logout").onclick = function(){
+document.getElementById("login").onclick = function(){
     localStorage.clear()
     window.location = "login.html"
 
