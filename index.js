@@ -31,7 +31,7 @@
 function checkLogin(){
     var username = localStorage.getItem("username")
     if(!username){
-        window.location = "Login.html"
+        window.location = "login.html"
     }
     else{
         document.getElementById("name").innerHTML = username
