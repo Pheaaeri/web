@@ -7,46 +7,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Index</title>
     <!--  <script type="module" src="./index.js"></script> -->
-    
+
 </head>
 
 <body>
 
 
 
-    <div class="login-logo">
-        <h3> ลงชื่อเข้าใช้เรียบร้อย </h3>
-    </div>
+
 
     <center>
-        <span style="font-weight: bold">ชื่อผู้ใช้งาน
-            <?= x ?>
-        </span>
+        <div class="login-logo">
+            <h3> ลงชื่อเข้าใช้เรียบร้อย </h3>
+        </div>
+
+
+        <span style="font-weight: bold">ชื่อผู้ใช้งาน :</span>
+        <br>
+        <br>
+        <div id="name">ssss</div>
+        <button id="logout">logout</button>
     </center>
-    
-
-    <div id="name">ssss</div>
 
 
 
-    
-    
 
-    
+
+
+
+
+
+    <script src="home.js"></script>
     <script>
         checkLogin();
-        function checkLogin(){
+        function checkLogin() {
             var username = localStorage.getItem("username")
-            if(!username){
+            if (!username) {
                 window.location = "login.html"
             }
-            else{
+            else {
                 document.getElementById("name").innerHTML = username
             }
         }
-
-
-       
     </script>
 </body>
 
