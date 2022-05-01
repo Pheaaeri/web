@@ -1,3 +1,10 @@
+function clearlogin(){
+	localStorage.clear()
+  }
+  
+clearlogin();
+
+
 function getInfo() {
 	var dataJSON = "https://script.google.com/macros/s/AKfycbxAPXPaw2Qmc-ywIq77mLymacUczvZjWv53h4tNkQhwMfAjiTUtS3FO3O_5g-sxPGCN/exec";
 	

@@ -39,6 +39,11 @@
 
 
 // }
+function clearlogin(){
+    localStorage.clear()
+  }
+  
+clearlogin();
 
 document.getElementById("login").onclick = function(){
     localStorage.clear()
