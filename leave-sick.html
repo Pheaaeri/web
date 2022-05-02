@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- <base target="_top"> -->
+    <title>ระบบลงชื่อเข้าใช้งานฐานข้อมูล</title>
+    <link rel="shortcut icon">
+
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+
+    <!-- DataTables -->
+    <link rel="stylesheet" href="plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+    <!-- Select2 -->
+    <link rel="stylesheet" href="plugins/select2/css/select2.min.css" />
+    <link rel="stylesheet" href="plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css" />
+    <!-- Theme style -->
+    <link rel="stylesheet" href="dist/css/adminlte.css">
+    <!-- Google Font: Source Sarabun -->
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@100;300;500;700&amp;display=swap"
+        rel="stylesheet">
+
+
+    <style>
+        /* Chrome, Safari, Edge, Opera */
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        /* Firefox */
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+    </style>
+
+</head>
+
+<body class="login-page"
+    style="background-repeat: no-repeat; background-size: cover; background-position: center center; min-height: 1200px;">
+
+
+
+
+
+    <!-- Class ลงชื่อเข้าใช้งาน -->
+    <div class="login-box">
+        <div class="card">
+
+            <div class="login-logo">
+                <div>
+                    <img class="mb-4 mt-3" src="img/doaweb.png" alt="" width="80" height="80">
+                </div>
+
+
+                <h2> PheaaeriOnline </h2>
+                <h5> ใบลาป่วย / ใบลากิจ</h5>
+                <!-- <h5> ชื่อผู้ใช้งาน <h5 id="name">Username</h5> -->
+            </div>
+
+
+
+
+
+            <div class="card-body login-card-body">
+                <form method="post">
+
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">ข้าพเจ้า</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="log2" name="log2" placeholder="" readonly>
+
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">เขียนวันที่</label>
+                        <div class="col-sm-8">
+                            <input type="date" class="form-control" id="" name="log2" placeholder="">
+
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">ประเภทการลา</label>
+                        <div class="col-sm-8">
+                            <!-- ทำเลือกชื่อผู้ใช้งาน -->
+                            <select type="text" class="form-control" id="username" name="username"
+                                placeholder="username" required="required">
+                                <option value="ลาป่วย">ลาป่วย</option>
+                                <option value="ลากิจ">ลากิจ</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">ลาวันที่</label>
+                        <div class="col-sm-8">
+                            <input type="date" class="form-control" id="" name="log2" placeholder="">
+
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">ถึงวันที่</label>
+                        <div class="col-sm-8">
+                            <input type="date" class="form-control" id="" name="log2" placeholder="">
+
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">เนื่องจาก</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="" name="log2" placeholder="">
+
+                        </div>
+                    </div>
+
+
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">มีกำหนด</label>
+                        <div class="col-sm-8">
+                            <input type="number" class="form-control" id="" name="log2" placeholder="" min="1" max="30">
+
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">ผู้ตรวจสอบ</label>
+                        <div class="col-sm-8">
+                            <!-- ทำเลือกชื่อผู้ใช้งาน -->
+                            <select type="text" class="form-control" id="" name="username" placeholder="username"
+                                required="required">
+                                <option value="น.ส.กฤตยา บุญสง่า">น.ส.กฤตยา บุญสง่า</option>
+                                <option value="นางจงรักษ์ เชี่ยวไล่กุล">นางจงรักษ์ เชี่ยวไล่กุล</option>
+                                <option value="นายอนุชิต ฉ่ำสิงห์">นายอนุชิต ฉ่ำสิงห์</option>
+
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">ผู้อนุมัติ</label>
+                        <div class="col-sm-8">
+                            <!-- ทำเลือกชื่อผู้ใช้งาน -->
+                            <select type="text" class="form-control" id="" name="username" placeholder="username"
+                                required="required">
+                                <option value="นายอนุชิต ฉ่ำสิงห์">นายอนุชิต ฉ่ำสิงห์</option>
+                                <option value="นายณัฐสิทธิ์ อยู่เย็น">นายณัฐสิทธิ์ อยู่เย็น</option>
+                                <option value="นางสาวปรีดาวรรณ ไชยศรีชลธาร">นางสาวปรีดาวรรณ ไชยศรีชลธาร</option>
+                                <option value="นายปรีชา อานันท์รัตนกุล">นายปรีชา อานันท์รัตนกุล</option>
+
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-12 mt-3">
+                        <button id="" class="btn btn-warning btn-block " type="Button" name="LogoutButton"
+                            style="margin-bottom: 5px;"><i class="fas fa-sign-out-alt"></i>
+                            บันทึกข้อมูล</button>
+                    </div>
+
+
+
+                    <div class="col-12 mt-3">
+                        <a href="./home.html"><button class="btn btn-light btn-block " type="button"><i
+                                    class="fa fa-bookmark"></i> กลับหน้าเมนู </button></a>
+                    </div>
+
+            </div>
+            </form>
+        </div>
+
+    </div>
+    </div>
+    </div>
+    <!-- link JS-->
+    <script src="js/leave-sivk.js"></script>
+
+    <script>
+        checkLogin();
+        function checkLogin() {
+            var username = localStorage.getItem("username")
+            if (!username) {
+                window.location = "login.html"
+            }
+            else {
+                //document.getElementById("name").innerHTML = username
+                document.getElementById("log2").value = username
+            }
+        }
+
+    </script>
+
+
+
+    <script src="dist/js/adminlte.min.js"></script>
+    <script src="plugins/jquery/jquery.min.js"></script>
+    <script>
+        //var userlog = localStorage.getItem("username")
+        //console.log(userlog);
+    </script>
+</body>
+
+</html>
