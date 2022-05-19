@@ -26,7 +26,7 @@ var uapi = [
 loaddataJSON();
 
 function loaddataJSON() {
-	var dataJSON = "https://script.google.com/macros/s/AKfycbxAPXPaw2Qmc-ywIq77mLymacUczvZjWv53h4tNkQhwMfAjiTUtS3FO3O_5g-sxPGCN/exec";
+	var dataJSON = "https://script.google.com/macros/s/AKfycbzhWPrzA19ABCqFRCF8o-K87xCbamWjxaf6nfA5wFd_BtM7ajSg2MWjmxDtMCR8AxA/exec";
 	// get ค่าจาก url
 	var xmlHttp = new XMLHttpRequest();
 	xmlHttp.open("GET", dataJSON, false); // false for synchronous request
@@ -37,11 +37,14 @@ function loaddataJSON() {
 	objPeople = JSON.parse(xmlHttp.responseText);
 }
 
+
+
+
 api();
 
 function api() {
     let ulname = "นายปริญญวัฒน์ อยู่ทองอินทร์"
-    let uid = uapi.find((value)=>{return(value.username == ulname)});
+    let uid = objPeople.find((value)=>{return(value.username == ulname)});
     //flat ดึงข้อมูลทั้งหมด
 
     //ดึงข้อมูลส่วนบุคคล value.username = usernamelogin
