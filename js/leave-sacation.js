@@ -24,13 +24,23 @@ function apilsday() {
     //uid = Jsondata
 
     let lsday = uid.lsday
-    document.getElementById("lsday1").value = lsday
+    //document.getElementById("lsday1").value = lsday
 
     let used = uid.used
-    document.getElementById("lsday2").value = used
+    //document.getElementById("lsday2").value = used
 
     let lssum = lsday - used
-    document.getElementById("lsday3").value = lssum
+   // document.getElementById("lsday3").value = lssum
+
+
+    let lsdays1 = document.getElementById("lsdays1");
+    lsdays1.innerHTML = lsday + " วัน";
+
+    let lsdays2 = document.getElementById("lsdays2");
+    lsdays2.innerHTML = used + " วัน";
+
+    let lsdays3 = document.getElementById("lsdays3");
+    lsdays3.innerHTML = lssum + " วัน";
 
     //console.log(lssum);
 

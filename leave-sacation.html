@@ -61,38 +61,40 @@
 
 
                 <h2> PheaaeriOnline </h2>
-                <h5> ใบลาพักผ่อน </h5>
+                <h5> แบบฟอร์มใบลาพักผ่อน </h5>
                 <!-- <h5> ชื่อผู้ใช้งาน <h5 id="name">Username</h5> -->
             </div>
 
-            <!-- Show leave-sacation Day  -->
+
             <div class="card-body login-card-body">
-                <form method="post">
+                <table class="table table-bordered">
+                    <!-- <thead>
+                        <tr>
+                            <th scope="col">วันพักผ่อน</th>
+                            <th scope="col">จำนวนวัน</th>
+                        </tr>
+                    </thead> -->
 
-                    <div class="form-group row">
-                        <label class="col-sm-4 col-form-label">มีวันลาพักผ่อนสะสมประจำปีนี้</label>
-                        <div class="col-sm-8">
-                            <input id="lsday1" type="text" class="form-control" id="log2" name="log2" placeholder=""
-                                readonly>
-                        </div>
-                    </div>
+                    <tbody>
+                        <tr>
+                            <th scope="row">มีวันพักผ่อนประจำปีนี้</th>
+                            <td id="lsdays1">-</td>
 
-                    <div class="form-group row">
-                        <label class="col-sm-4 col-form-label">ลาพักผ่อนมาแล้ว</label>
-                        <div class="col-sm-8">
-                            <input id="lsday2" type="text" class="form-control" id="log2" name="log2" placeholder=""
-                                readonly>
-                        </div>
-                    </div>
+                        </tr>
+                        <tr>
+                            <th scope="row">ลาพักผ่อนไปแล้ว</th>
+                            <td id="lsdays2">-</td>
 
-                    <div class="form-group row">
-                        <label class="col-sm-4 col-form-label">เหลือวันลาพักผ่อน</label>
-                        <div class="col-sm-8">
-                            <input id="lsday3" type="text" class="form-control" id="log2" name="log2" placeholder=""
-                                readonly>
-                        </div>
-                    </div>
+                        </tr>
+                        <tr>
+                            <th scope="row">เหลือวันพักผ่อน</th>
+                            <td id="lsdays3">-</td>
+
+                        </tr>
+                    </tbody>
+                </table>
             </div>
+
 
 
 
@@ -118,7 +120,7 @@
                     </div>
 
                     <div class="form-group row">
-                        <label class="col-sm-4 col-form-label">ประเภทการลา</label>
+                        <label class="col-sm-4 col-form-label">ประเภท</label>
                         <div class="col-sm-8">
                             <input type="text" class="form-control" id="" name="log2" value="ลาพักผ่อน" placeholder=""
                                 readonly>
@@ -144,8 +146,23 @@
                     <div class="form-group row">
                         <label class="col-sm-4 col-form-label">มีกำหนด</label>
                         <div class="col-sm-8">
-                            <input type="number" class="form-control" id="" name="log2" placeholder="" min="1" max="2">
-
+                            <select type="number" class="form-control" id="" name="" placeholder="" required="required">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                            </select>
                         </div>
                     </div>
 
