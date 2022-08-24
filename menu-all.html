@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+
+<head id="headhome">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <base target="_top">
+    <link rel="shortcut icon">
+
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+
+    <!-- DataTables -->
+    <link rel="stylesheet" href="plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+    <!-- Select2 -->
+    <link rel="stylesheet" href="plugins/select2/css/select2.min.css" />
+    <link rel="stylesheet" href="plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css" />
+    <!-- Theme style -->
+    <link rel="stylesheet" href="dist/css/adminlte.css">
+    <!-- Google Font: Source Sarabun -->
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@100;300;500;700&amp;display=swap"
+        rel="stylesheet">
+
+
+    <style>
+        /* Chrome, Safari, Edge, Opera */
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        /* Firefox */
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+    </style>
+</head>
+
+<body class="hold-transition login-page"
+    style="background-repeat: no-repeat; background-size: cover; background-position: center center;">
+
+
+
+
+    <!-- Class ลงชื่อเข้าใช้งาน -->
+    <div class="login-box">
+        <div class="card">
+
+            <div class="login-logo">
+                <div>
+                    <img class="mb-4 mt-3" src="img/doaweb.png" alt="" width="80" height="80">
+                </div>
+
+
+                <h2> PheaaeriOnline </h2>
+                <h5> กลุ่มวิจัยวิศวกรรมหลังการเก็บเกี่ยว</h5>
+                <h5> กรมวิชาการเกษตร </h5>
+            </div>
+
+
+
+
+            <div class="card-body login-card-body">
+                <form method="post">
+
+                    <div class="row justify-content-around">
+                        <div class="col-12 mt-3">
+                            <a href="https://forms.gle/UwqceSvKhRPK7Nmv7"><button class="btn btn-light btn-block " type="button">
+                                    <i class="fas fa-receipt"> </i> ออกนอกสถานที่ในเวลางาน </button></a>
+                        </div>
+
+                        <div class="col-12 mt-3">
+                            <a href="https://forms.gle/Qz5pTNn6r7vCLVTR9"><button class="btn btn-light btn-block " type="button">
+                                    <i class="fas fa-receipt"> </i> ใบลาป่วย / ใบลากิจ </button></a>
+                        </div>
+
+                        <div class="col-12 mt-3">
+                            <a href="https://forms.gle/YPup9gQaDALv6imF8"><button class="btn btn-light btn-block " type="button">
+                                    <i class="fas fa-receipt"> </i> ใบลาพักผ่อน </button></a>
+                        </div>
+
+                        <div class="col-12 mt-3">
+                            <a href="https://drive.google.com/drive/u/0/folders/1v8PO1nomJdcAgFEw44Cr556MIfdrJXLK"><button class="btn btn-light btn-block " type="button"><i
+                                        class="fa fa-bookmark"></i> ปลิ้นใบลาป่วย/ใบลากิจ </button></a>
+                        </div>
+                        
+                        <div class="col-12 mt-3">
+                            <a href="https://drive.google.com/drive/u/0/folders/1GniFt7zMNGVjPlivzyRSnl_NqTC3qLaw"><button class="btn btn-light btn-block " type="button"><i
+                                        class="fa fa-bookmark"></i> ปลิ้นใบลาพักผ่อน </button></a>
+                        </div>
+                        <!-- 
+                        <div class="col-12 mt-3">
+                            <button id="logout" class="btn btn-success btn-block " type="Button" name="LogoutButton"
+                                style="margin-bottom: 5px;"><i class="fas fa-sign-out-alt"></i>
+                                ออกจากระบบ</button>
+                        </div>
+                        -->
+
+
+
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+    <!-- 
+    <script src="js/home.js"></script>
+    
+
+    //<script>
+        checkLogin();
+
+        function checkLogin() {
+            var username = localStorage.getItem("username")
+            if (!username) {
+                window.location = "login.html"
+            }
+            else {
+                document.getElementById("name").innerHTML = username
+            }
+        }
+
+        // function headinput(){
+        //     var xhead = document.getElementById("headhome");
+        //     xhead.innerHTML = "test.html"
+        // }
+
+    </script>
+    -->
+
+
+
+    <script src="dist/js/adminlte.min.js"></script>
+    <script src="plugins/jquery/jquery.min.js"></script>
+    <script>
+        //var userlog = localStorage.getItem("username")
+        //console.log(userlog);
+    </script>
+</body>
+
+</html>
