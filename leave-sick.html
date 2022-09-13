@@ -60,7 +60,7 @@
                 </div>
 
 
-                <h2> PheaaeriOnline </h2>
+                <h2> PhegaeriOnline </h2>
                 <h5> ใบลาป่วย / ใบลากิจ</h5>
                 <!-- <h5> ชื่อผู้ใช้งาน <h5 id="name">Username</h5> -->
             </div>
@@ -70,12 +70,13 @@
 
 
             <div class="card-body login-card-body">
-                <form method="post">
+                <form method="post" name="formleavesick" id="formleavesick">
+                    <!-- formleavesick -->
 
                     <div class="form-group row">
                         <label class="col-sm-4 col-form-label">ข้าพเจ้า</label>
                         <div class="col-sm-8">
-                            <input type="text" class="form-control" id="log2" name="log2" placeholder="" readonly>
+                            <input type="text" class="form-control" id="log2" name="ข้าพเจ้า" placeholder="" readonly>
 
                         </div>
                     </div>
@@ -83,7 +84,7 @@
                     <div class="form-group row">
                         <label class="col-sm-4 col-form-label">เขียนวันที่</label>
                         <div class="col-sm-8">
-                            <input type="date" class="form-control" id="" name="log2" placeholder="">
+                            <input type="date" class="form-control" id="" name="เขียนวันที่" placeholder="">
 
                         </div>
                     </div>
@@ -92,8 +93,8 @@
                         <label class="col-sm-4 col-form-label">ประเภทการลา</label>
                         <div class="col-sm-8">
                             <!-- ทำเลือกชื่อผู้ใช้งาน -->
-                            <select type="text" class="form-control" id="username" name="username"
-                                placeholder="username" required="required">
+                            <select type="text" class="form-control" id="" name="ประเภทการลา" placeholder=""
+                                required="required">
                                 <option value="ลาป่วย">ลาป่วย</option>
                                 <option value="ลากิจ">ลากิจ</option>
                             </select>
@@ -103,7 +104,7 @@
                     <div class="form-group row">
                         <label class="col-sm-4 col-form-label">ลาวันที่</label>
                         <div class="col-sm-8">
-                            <input type="date" class="form-control" id="" name="log2" placeholder="">
+                            <input type="date" class="form-control" id="" name="ลาวันที่" placeholder="">
 
                         </div>
                     </div>
@@ -111,24 +112,40 @@
                     <div class="form-group row">
                         <label class="col-sm-4 col-form-label">ถึงวันที่</label>
                         <div class="col-sm-8">
-                            <input type="date" class="form-control" id="" name="log2" placeholder="">
+                            <input type="date" class="form-control" id="" name="ถึงวันที่" placeholder="">
 
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">มีกำหนด</label>
+                        <div class="col-sm-8">
+                            <!-- ทำเลือกชื่อผู้ใช้งาน -->
+                            <select type="text" class="form-control" id="" name="มีกำหนด" placeholder=""
+                                required="required">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                            </select>
                         </div>
                     </div>
 
                     <div class="form-group row">
                         <label class="col-sm-4 col-form-label">เนื่องจาก</label>
                         <div class="col-sm-8">
-                            <input type="text" class="form-control" id="" name="log2" placeholder="">
-
-                        </div>
-                    </div>
-
-
-                    <div class="form-group row">
-                        <label class="col-sm-4 col-form-label">มีกำหนด</label>
-                        <div class="col-sm-8">
-                            <input type="number" class="form-control" id="" name="log2" placeholder="" min="1" max="30">
+                            <input type="text" class="form-control" id="" name="เนื่องจาก" placeholder="">
 
                         </div>
                     </div>
@@ -137,8 +154,7 @@
                         <label class="col-sm-4 col-form-label">ผู้ตรวจสอบ</label>
                         <div class="col-sm-8">
                             <!-- ทำเลือกชื่อผู้ใช้งาน -->
-                            <select type="text" class="form-control" id="" name="username" placeholder="username"
-                                required="required">
+                            <select type="text" class="form-control" id="" name="ผู้ตรวจสอบ" placeholder="" required="required">
                                 <option value="น.ส.กฤตยา บุญสง่า">น.ส.กฤตยา บุญสง่า</option>
                                 <option value="นางจงรักษ์ เชี่ยวไล่กุล">นางจงรักษ์ เชี่ยวไล่กุล</option>
                                 <option value="นายอนุชิต ฉ่ำสิงห์">นายอนุชิต ฉ่ำสิงห์</option>
@@ -151,21 +167,23 @@
                         <label class="col-sm-4 col-form-label">ผู้อนุมัติ</label>
                         <div class="col-sm-8">
                             <!-- ทำเลือกชื่อผู้ใช้งาน -->
-                            <select type="text" class="form-control" id="" name="username" placeholder="username"
+                            <select type="text" class="form-control" id="" name="ผู้อนุมัติ" placeholder=""
                                 required="required">
                                 <option value="นายอนุชิต ฉ่ำสิงห์">นายอนุชิต ฉ่ำสิงห์</option>
                                 <option value="นายณัฐสิทธิ์ อยู่เย็น">นายณัฐสิทธิ์ อยู่เย็น (ปฏิบัติราชการแทน)</option>
-                                <option value="นางสาวปรีดาวรรณ ไชยศรีชลธาร">นางสาวปรีดาวรรณ ไชยศรีชลธาร (ปฏิบัติราชการแทน)</option>
-                                <option value="นายปรีชา อานันท์รัตนกุล">นายปรีชา อานันท์รัตนกุล (ปฏิบัติราชการแทน)</option>
+                                <option value="นางสาวปรีดาวรรณ ไชยศรีชลธาร">นางสาวปรีดาวรรณ ไชยศรีชลธาร
+                                    (ปฏิบัติราชการแทน)</option>
+                                <option value="นายปรีชา อานันท์รัตนกุล">นายปรีชา อานันท์รัตนกุล (ปฏิบัติราชการแทน)
+                                </option>
 
                             </select>
                         </div>
                     </div>
 
                     <div class="col-12 mt-3">
-                        <button id="" class="btn btn-warning btn-block " type="Button" name="LogoutButton"
+                        <button id="" class="btn btn-warning btn-block " type="submit" name="FormleavesickButton"
                             style="margin-bottom: 5px;"><i class="fas fa-sign-out-alt"></i>
-                            #บันทึกข้อมูล</button>
+                            บันทึกข้อมูล</button>
                     </div>
 
 
@@ -175,11 +193,12 @@
                                     class="fa fa-bookmark"></i> กลับหน้าเมนู </button></a>
                     </div>
 
-            </div>
-            </form>
-        </div>
 
-    </div>
+
+                </form>
+            </div>
+
+        </div>
     </div>
     </div>
     <!-- link JS-->
@@ -187,7 +206,7 @@
 
     <script>
         checkLogin();
-        function checkLogin() {
+       function checkLogin() {
             var username = localStorage.getItem("username")
             if (!username) {
                 window.location = "login.html"
