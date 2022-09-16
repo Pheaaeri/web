@@ -7,12 +7,13 @@ function leavesick() {
     form.addEventListener('submit', e => {
         e.preventDefault()
         fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-            .then(response => alert("บันทึกข้อมูลเรียบร้อยแล้ว..."),
-             setTimeout(() => {
-                Reform()
-             },3000))
+
+            //สำเร็จ
+            //.then(response => alert("บันทึกข้อมูลเรียบร้อยแล้ว..."))
+            .then(response => JSalert())
+
+            //ไม่สำเร็จ
             .catch(error => console.error('Error!', error.message))
-        //formResetdata(); //=> เมื่อบันทึกข้อมูลแล้ว run function formResetdata เพื่อ ResetForm
     })
 };
 
@@ -22,6 +23,16 @@ function leavesick() {
 //     Reform();
 // };
 
-function Reform() {
-    window.location = './home.html' //=> เมื่อ ResetForm เสร็จแล้ว โหลดหน้า leave-sick.html *หน้าฟอร์มลาป่วยลากิจ*
-};
+// สำเร็จ 
+// .then(response => alert("บันทึกข้อมูลเรียบร้อยแล้ว..."),
+// setTimeout(() => {
+//     Reform()
+// }, 3000))
+
+function JSalert() {
+    swal("บันทึกข้อมูลเรียบร้อย", ", Your account is created!", "success");
+}
+
+// function Reform() {
+//     window.location = './home.html' //=> เมื่อ ResetForm เสร็จแล้ว โหลดหน้า leave-sick.html *หน้าฟอร์มลาป่วยลากิจ*
+// };
