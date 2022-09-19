@@ -74,7 +74,7 @@
 
 
                 <h2> PhegaeriOnline </h2>
-                <h5> ใบลาป่วย / ใบลากิจ</h5>
+                <h5> แบบฟอร์ม ใบลาป่วย / ใบลากิจ</h5>
                 <!-- <h5> ชื่อผู้ใช้งาน <h5 id="name">Username</h5> -->
             </div>
 
@@ -171,6 +171,7 @@
                                 required="required">
                                 <option value="น.ส.กฤตยา บุญสง่า">น.ส.กฤตยา บุญสง่า</option>
                                 <option value="นางจงรักษ์ เชี่ยวไล่กุล">นางจงรักษ์ เชี่ยวไล่กุล</option>
+                                <option value="นายณัฐสิทธิ์ อยู่เย็น">นายณัฐสิทธิ์ อยู่เย็น</option>
                                 <option value="นายอนุชิต ฉ่ำสิงห์">นายอนุชิต ฉ่ำสิงห์</option>
 
                             </select>
@@ -218,9 +219,9 @@
                                 </div>
 
                                 <div class="modal-body">
-                                    <p>กรุณาตรวจสอบข้อมูลอีกครั้ง ก่อนกดบันทึกข้อมูล</p>
-                                    <p class="text-secondary"><small>If you don't save, your changes will
-                                            belost.</small></p>
+                                    <p style="color:red;">กรุณาตรวจสอบข้อมูลอีกครั้ง ก่อนกดบันทึกข้อมูล</p>
+                                    <!--<p class="text-secondary"><small>If you don't save, your changes will
+                                            belost.</small></p> -->
 
                                     <div class="form-group row">
                                         <div class="col-sm-8">
@@ -295,10 +296,11 @@
                                     </div>
 
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary"
+                                        <button type="button" class="btn btn-secondary btn-block "
                                             data-bs-dismiss="modal">แก้ไข</button>
-                                        <button id="" class="btn btn-warning btn-block " type="submit"
-                                            name="FormleavesickButton" style="margin-bottom: 5px;"><i
+
+                                        <button id="" class="btn btn-success  btn-block " type="submit"
+                                            name="FormleavesickButton" style="margin-bottom: 3px;"><i
                                                 class="fas fa-sign-out-alt"></i>บันทึกข้อมูล</button>
                                     </div>
                                 </div>
@@ -337,64 +339,10 @@
         }
     </script>
 
-
-
     <script src="dist/js/adminlte.min.js"></script>
     <script src="dist/js/bootstrap.bundle.min.js"></script>
     <script src="plugins/jquery/jquery.min.js"></script>
 
-    <script>
-        function chaaa() {
-
-            //ข้าพเจ้า
-            let na0 = localStorage.getItem("username")
-            document.getElementById("rown0").value = na0
-
-            //เขียนวันที่
-            let na1 = document.getElementById("ran1").value
-            document.getElementById("rown1").value = na1
-
-            //ประเภทการลา
-            let na2 = document.getElementById("ran2").value
-            document.getElementById("rown2").value = na2
-
-            //ลาวันที่
-            let na3 = document.getElementById("ran3").value
-            document.getElementById("rown3").value = na3
-
-            //ถึงวันที่
-            let na4 = document.getElementById("ran4").value
-            document.getElementById("rown4").value = na4
-
-            //มีกำหนด
-            let na5 = document.getElementById("ran5").value
-            document.getElementById("rown5").value = na5
-
-            //เนื่องจาก
-            let na6 = document.getElementById("ran6").value
-            document.getElementById("rown6").value = na6
-
-            //ผู้ตรวจสอบ
-            let na7 = document.getElementById("ran7").value
-            document.getElementById("rown7").value = na7
-
-            //ผู้อนุมัติ
-            let na8 = document.getElementById("ran8").value
-            document.getElementById("rown8").value = na8
-
-
-
-            //let ra = document.getElementById("ran0")
-
-            // let rowname1 = document.getElementById("rowname1");
-            // rowname1.innerHTML = na;
-
-
-            //var userlog = localStorage.getItem("username")
-            //onclick="getInfo()"
-            //console.log(ra);
-        }
-    </script>
 </body>
 
 </html>
