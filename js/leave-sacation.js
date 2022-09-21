@@ -58,7 +58,7 @@ function apilsday() {
 //Function ส่งข้อมูล
 leavesacation();
 function leavesacation() {
-    const scriptURL = '*** URL ***'
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwJdUh2e_3ntvgirHPOkgoh9ISHAs53ovxy6mzpDTpAO9fyJeJ6JV0qa-kIslo8ioUjsg/exec'
     const form = document.forms['formsacation'] //formsacation คือ FormName
 
     form.addEventListener('submit', e => {
@@ -74,13 +74,26 @@ function leavesacation() {
 };
 
 //Function ตอบกลับ-ส่งข้อมูล
+
 function JSalert() {
-    swal("บันทึกข้อมูลเรียบร้อย", "Your account is created!", "success");
-}
+    setTimeout(function () {
+        swal({
+            title: "บันทึกข้อมูลเรียบร้อย",
+            text: "กรุณารอสักครูกำลังไปหาสั้งปริ้น",
+            type: "success",
+        },function () {    
+            window.location = "home.html"
+        })
+    });
+};
+
+
 
 //เมื่อกดส่งข้อมูล ->
 //ฟอร์มยันยันข้อมูล
-function chaaa() {
+function checkformpopup() {
+
+
 
     //ข้าพเจ้า
     let na0 = localStorage.getItem("username")
@@ -106,17 +119,17 @@ function chaaa() {
     let na5 = document.getElementById("ran5").value
     document.getElementById("rown5").value = na5
 
-    //***เนื่องจาก
+    //ผู้ตรวจสอบ
     let na6 = document.getElementById("ran6").value
     document.getElementById("rown6").value = na6
 
-    //ผู้ตรวจสอบ
+    //ผู้อนุมัติ
     let na7 = document.getElementById("ran7").value
     document.getElementById("rown7").value = na7
 
-    //ผู้อนุมัติ
-    let na8 = document.getElementById("ran8").value
-    document.getElementById("rown8").value = na8
+
+    // let na8 = document.getElementById("ran8").value
+    // document.getElementById("rown8").value = na8
 
     //onclick="getInfo()"
     //console.log(ra);
