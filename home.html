@@ -58,8 +58,8 @@
 
 
                 <h2> PhegaeriOnline </h2>
-                <h5> ลงชื่อเข้าใช้งานเรียบร้อย</h5>
-                <h5> ชื่อผู้ใช้งาน <h5 id="name">Username</h5>
+                <!-- <h5> ลงชื่อเข้าใช้งานเรียบร้อย</h5> -->
+                <h6 id="name">Username</h6>
             </div>
 
 
@@ -113,7 +113,7 @@
                 window.location = "login.html"
             }
             else {
-                document.getElementById("name").innerHTML = username
+                document.getElementById("name").innerHTML = "ผู้ใช้งาน : " + username
             }
         }
 
