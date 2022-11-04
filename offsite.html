@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- <base target="_top"> -->
+    <title>แบบขออนุญาตออกนอกสถานที่ในเวลาราชการ</title>
+    <link rel="shortcut icon">
+
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+
+    <!-- DataTables -->
+    <link rel="stylesheet" href="plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+    <!-- Select2 -->
+    <link rel="stylesheet" href="plugins/select2/css/select2.min.css" />
+    <link rel="stylesheet" href="plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css" />
+    <!-- Theme style **โครงสร้าง** -->
+    <link rel="stylesheet" href="dist/css/adminlte.css">
+
+    <link rel="stylesheet" href="dist/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="dist/css/sweetalert.min.css">
+
+    <!-- Google Font: Source Sarabun -->
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@100;300;500;700&amp;display=swap"
+        rel="stylesheet">
+
+
+    <style>
+        /* Chrome, Safari, Edge, Opera */
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        /* Firefox */
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+    </style>
+
+</head>
+
+<body class="login-page"
+    style="background-repeat: no-repeat; background-size: cover; background-position: center center; min-height: 1420px;">
+
+
+
+
+
+    <!-- Class ลงชื่อเข้าใช้งาน -->
+    <div class="login-box">
+        <div class="card">
+
+            <div class="login-logo">
+                <div>
+                    <img class="mb-4 mt-3" src="img/doaweb.png" alt="" width="80" height="80">
+                </div>
+
+
+                <h2> PhegaeriOnline </h2>
+                <h5> แบบขออนุญาตออกนอกสถานที่ในเวลาราชการ </h5>
+                <!-- <h5> ชื่อผู้ใช้งาน <h5 id="name">Username</h5> -->
+            </div>
+
+            <!-- Form leave-sacation -->
+            <div class="card-body login-card-body">
+                <form method="post" id="formoffsite">
+
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">ข้าพเจ้า</label>
+                        <div class="col-sm-8">
+                            <!-- <input type="text" class="form-control" id="log2" name="ข้าพเจ้า" placeholder="" readonly> -->
+                            <select type="text" class="form-control" id="log2" name="ข้าพเจ้า"
+                                placeholder="" required="">
+
+                                <option value="">เลือกชื่อผู้ใช้งาน</option>
+                                <option value="นายอนุชิต ฉ่ำสิงห์">นายอนุชิต ฉ่ำสิงห์</option>
+                                <option value="นางสาวปรีดาวรรณ ไชยศรีชลธาร">นางสาวปรีดาวรรณ ไชยศรีชลธาร</option>
+                                <option value="นายปรีชา อานันท์รัตนกุล">นายปรีชา อานันท์รัตนกุล</option>
+                                <option value="นายจิรวัสส์ เจียตระกูล">นายจิรวัสส์ เจียตระกูล</option>
+                                <option value="นายปริญญวัฒน์ อยู่ทองอินทร์">นายปริญญวัฒน์ อยู่ทองอินทร์</option>
+                                <option value="นายคชธร อ่างบุญพงษ์">นายคชธร อ่างบุญพงษ์</option>
+                                <option value="นายสุรชาติ ระย้าทอง">นายสุรชาติ ระย้าทอง</option>
+                                <!-- <option value="">เลือกชื่อผู้ใช้งาน</option> -->
+                                <option value="นายสันติ โพธิ์ทอง">นายสันติ โพธิ์ทอง</option>
+                                <option value="ว่าที่ ร.ต.ปัญญาพล พูลสุข">ว่าที่ ร.ต.ปัญญาพล พูลสุข</option>
+                                <option value="นายธีรภัทร์ บัวยศ">นายธีรภัทร์ บัวยศ</option>
+                                <option value="นายอภิชาติ ยิ่งวุฒิวรกุล">นายอภิชาติ ยิ่งวุฒิวรกุล</option>
+                                <option value="นายชาตรี หาศาสน์ศรี">นายชาตรี หาศาสน์ศรี</option>
+                                <option value="นายปราโมทย์ จันทร์ประสงค์">นายปราโมทย์ จันทร์ประสงค์</option>
+                                <option value="นายสกล สิงห์สี">นายสกล สิงห์สี</option>
+                                <option value="นายเอก สุนทรวิภาต">นายเอก สุนทรวิภาต</option>
+                                <option value="นายอนุชา ชมดง">นายอนุชา ชมดง</option>
+                                <option value="นายสมคิด นัยวงศ์">นายสมคิด นัยวงศ์</option>
+                                <option value="นายสมบัติ ศรีประทุม">นายสมบัติ ศรีประทุม</option>
+                                <option value="นายมาโนช เงินมี">นายมาโนช เงินมี</option>
+                            </select>
+
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">เขียนวันที่</label>
+                        <div class="col-sm-8">
+                            <input type="date" class="form-control" data-provide="datepicker" data-date-language="th-th" id="ran1" name="เขียนวันที่" placeholder="">
+
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">เหตุผล</label>
+                        <div class="col-sm-8">
+                            <textarea type="text" class="form-control" id="ran2" name="เหตุผล"
+                                placeholder=""></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">สถานที่</label>
+                        <div class="col-sm-8">
+                            <textarea type="text" class="form-control" id="ran3" name="สถานที่"
+                                placeholder=""></textarea>
+
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">ในวันที่</label>
+                        <div class="col-sm-8">
+                            <input type="date" class="form-control" id="ran4" name="ในวันที่" placeholder="">
+
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">ระหว่างเวลา</label>
+                        <div class="col-sm-8">
+                            <input type="time" class="form-control" id="ran5" name="ระหว่างเวลา" placeholder="">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">ถึงเวลา</label>
+                        <div class="col-sm-8">
+                            <input type="time" class="form-control" id="ran6" name="ถึงเวลา" placeholder="">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">หัวหน้างาน</label>
+                        <div class="col-sm-8">
+                            <!-- ทำเลือกชื่อผู้ใช้งาน -->
+                            <select type="text" class="form-control" id="ran7" name="หัวหน้างาน" placeholder=""
+                                required="required">
+                                <option value="นายณัฐสิทธิ์ อยู่เย็น">นายณัฐสิทธิ์ อยู่เย็น</option>
+                                <option value="นายอนุชิต ฉ่ำสิงห์">นายอนุชิต ฉ่ำสิงห์</option>
+
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">ผู้อนุมัติ</label>
+                        <div class="col-sm-8">
+                            <!-- ทำเลือกชื่อผู้ใช้งาน -->
+                            <select type="text" class="form-control" id="ran8" name="ผู้อนุมัติ" placeholder=""
+                                required="required">
+                                <option value="นายอนุชิต ฉ่ำสิงห์">นายอนุชิต ฉ่ำสิงห์</option>
+                                <option value="นายณัฐสิทธิ์ อยู่เย็น">นายณัฐสิทธิ์ อยู่เย็น (ปฏิบัติราชการแทน)</option>
+                                <option value="นางสาวปรีดาวรรณ ไชยศรีชลธาร">นางสาวปรีดาวรรณ ไชยศรีชลธาร
+                                    (ปฏิบัติราชการแทน)</option>
+                                <option value="นายปรีชา อานันท์รัตนกุล">นายปรีชา อานันท์รัตนกุล (ปฏิบัติราชการแทน)
+                                </option>
+
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-12 mt-3">
+                        <button id="" class="btn btn-warning btn-block " onclick="checkformpopup()" type="button"
+                            name="FormleavesickButton" style="margin-bottom: 5px;" data-bs-target="#myModal"
+                            data-bs-toggle="modal"><i class="fas fa-sign-out-alt"></i>
+                            ส่งข้อมูล</button>
+                    </div>
+
+                    <!-- Modal HTML -->
+                    <div id="myModal" class="modal fade" data-bs-backdrop="static" tabindex="-1">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">ยืนยันข้อมูล</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+
+                                <div class="modal-body">
+                                    <p style="color:red;">กรุณาตรวจสอบข้อมูลอีกครั้ง ก่อนกดบันทึกข้อมูล</p>
+
+                                    <div class="form-group row">
+                                        <label class="col-sm-4 col-form-label">ข้าพเจ้า</label>
+                                        <div class="col-sm-8">
+                                            <input type="text" class="form-control" id="rown0" name="-" placeholder=""
+                                                readonly>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label class="col-sm-4 col-form-label">วันที่เขียน</label>
+                                        <div class="col-sm-8">
+                                            <input type="date" class="form-control" id="rown1" name="-" placeholder=""
+                                                readonly>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label class="col-sm-4 col-form-label">เหตุผล</label>
+                                        <div class="col-sm-8">
+                                            <input type="text" class="form-control" id="rown2" name="-" placeholder=""
+                                                readonly>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label class="col-sm-4 col-form-label">สถานที่</label>
+                                        <div class="col-sm-8">
+                                            <input type="text" class="form-control" id="rown3" name="-" placeholder=""
+                                                readonly>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label class="col-sm-4 col-form-label">ในวันที่</label>
+                                        <div class="col-sm-8">
+                                            <input type="date" class="form-control" id="rown4" name="-" placeholder=""
+                                                readonly>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label class="col-sm-4 col-form-label">ระหว่างเวลา</label>
+                                        <div class="col-sm-8">
+                                            <input type="text" class="form-control" id="rown5" name="-" placeholder=""
+                                                readonly>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label class="col-sm-4 col-form-label">ถึงเวลา</label>
+                                        <div class="col-sm-8">
+                                            <input type="text" class="form-control" id="rown6" name="-" placeholder=""
+                                                readonly>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label class="col-sm-4 col-form-label">หัวหน้างาน</label>
+                                        <div class="col-sm-8">
+                                            <input type="text" class="form-control" id="rown7" name="-" placeholder=""
+                                                readonly>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label class="col-sm-4 col-form-label">ผู้อนุมัติ</label>
+                                        <div class="col-sm-8">
+                                            <input type="text" class="form-control" id="rown8" name="-" placeholder=""
+                                                readonly>
+                                        </div>
+                                    </div>
+
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary btn-block "
+                                            data-bs-dismiss="modal">แก้ไขข้อมูล</button>
+
+                                        <button id="" class="btn btn-success  btn-block " type="submit"
+                                            name="FormleavesickButton" style="margin-bottom: 3px;"><i
+                                                class="fas fa-sign-out-alt"></i>บันทึกข้อมูล</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Modal HTML -->
+
+
+                    <div class="col-12 mt-3">
+                        <a href="./home.html"><button class="btn btn-light btn-block " type="button"><i
+                                    class="fa fa-bookmark"></i> กลับหน้าเมนู </button></a>
+                    </div>
+
+            </div>
+            </form>
+        </div>
+
+    </div>
+    </div>
+    </div>
+    <!-- link JS-->
+    <script src="js/offsite.js"></script>
+
+    <!-- link run plugins -->
+    <script src="dist/js/sweetalert.min.js"></script>
+    <script src="dist/js/adminlte.min.js"></script>
+    <script src="dist/js/bootstrap.bundle.min.js"></script>
+    <script src="plugins/jquery/jquery.min.js"></script>
+    <script>
+        //var userlog = localStorage.getItem("username")
+        //console.log(userlog);
+    </script>
+</body>
+
+</html>
