@@ -33,6 +33,7 @@ function JSalert() {
 //เมื่อกดส่งข้อมูล ->
 //ฟอร์มยันยันข้อมูล
 function checkformpopup() {
+    //ใส่ clss reree
 
 
 
