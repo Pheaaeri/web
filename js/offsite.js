@@ -1,3 +1,16 @@
+//เช็ด Login 
+checkLogin();
+function checkLogin() {
+    var username = localStorage.getItem("username")
+    if (!username) {
+        window.location = "login.html"
+    }
+    else {
+        //document.getElementById("name").innerHTML = username
+        document.getElementById("log2").value = username
+    }
+}
+
 //Function ส่งข้อมูล
 offsite();
 function offsite() {
