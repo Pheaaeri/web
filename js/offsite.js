@@ -11,6 +11,51 @@ function checkLogin() {
     }
 }
 
+//Function รับข้อมูล
+//Link = https://script.google.com/macros/s/AKfycbz7HpK-qhVxBABCyTa4jAzxTKd0gu-WJZaTBhJWUTo_jQ_X-59N3ntr0yhGrNsJ-STJ/exec
+//loaddatalsday();
+function loaddatalsday() {
+    var dataJSON = "*** Link ***";
+    // get ค่าจาก url
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open("GET", dataJSON, false); // false for synchronous request
+    xmlHttp.send(null);
+    obj = xmlHttp.responseText;
+
+    // แปลง string เป็น JSON
+    objPeople = JSON.parse(xmlHttp.responseText);
+}
+
+//Function รับข้อมูล-ข้อมูลประวัติวันลาพักผ่อน
+//apilsday();
+function apilsday() {
+    let ulname = localStorage.getItem("username")
+    let uid = objPeople.find((value) => { return (value.username == ulname) });
+    //flat ดึงข้อมูลทั้งหมด
+
+    //ดึงข้อมูลส่วนบุคคล value.username = usernamelogin
+    //uid = Jsondata
+
+    //มีวันพักผ่อนประจำปีนี้
+    let lsday = uid.lsday
+    let lsdays1 = document.getElementById("lsdays1");
+    lsdays1.innerHTML = lsday + " วัน";
+    //document.getElementById("lsday1").value = lsday
+
+    //ลาพักผ่อนไปแล้ว
+    let used = uid.used
+    let lsdays2 = document.getElementById("lsdays2");
+    lsdays2.innerHTML = used + " วัน";
+    //document.getElementById("lsday2").value = used
+
+    //เหลือวันพักผ่อน
+    let lssum = lsday - used
+    let lsdays3 = document.getElementById("lsdays3");
+    lsdays3.innerHTML = lssum + " วัน";
+    // document.getElementById("lsday3").value = lssum
+    //console.log(lssum);
+}
+
 //Function ส่งข้อมูล
 offsite();
 function offsite() {
