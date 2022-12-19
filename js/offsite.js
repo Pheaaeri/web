@@ -66,7 +66,7 @@ function offsite() {
         e.preventDefault()
 
 
-
+        Loading() //หน้ากำลังบันทึกมูล
         
         fetch(scriptURL, { method: 'POST', body: new FormData(form) })
 
@@ -88,6 +88,16 @@ function JSalert() {
             type: "success",
         }, function () {
             window.location = "home.html"
+        })
+    });
+};
+
+function Loading() {
+    setTimeout(function () {
+        swal({
+            title: "กำลังบันทึกข้อมูล",
+            //text: "คำเนินการต่อ",
+            //type: "success",
         })
     });
 };
