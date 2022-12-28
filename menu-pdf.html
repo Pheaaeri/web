@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+
+<head id="headhome">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <base target="_top">
+    <title>PDF File</title>
+    <link rel="shortcut icon">
+
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+
+    <!-- DataTables -->
+    <link rel="stylesheet" href="plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+    <!-- Select2 -->
+    <link rel="stylesheet" href="plugins/select2/css/select2.min.css" />
+    <link rel="stylesheet" href="plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css" />
+    <!-- Theme style -->
+    <link rel="stylesheet" href="dist/css/adminlte.css">
+    <!-- Google Font: Source Sarabun -->
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@100;300;500;700&amp;display=swap"
+        rel="stylesheet">
+
+    <!--
+    <style>
+        /* Chrome, Safari, Edge, Opera */
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        /* Firefox */
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+    </style>
+    -->
+
+</head>
+
+<body class="hold-transition login-page"
+    style="background-repeat: no-repeat; background-size: cover; background-position: center center;">
+
+
+
+
+    <!-- Class ลงชื่อเข้าใช้งาน -->
+    <div class="login-box">
+        <div class="card">
+
+            <div class="login-logo">
+                <div>
+                    <img class="mb-4 mt-3" src="img/doaweb.png" alt="" width="80" height="80">
+                </div>
+
+                <h2> PhegaeriOnline </h2>
+                <h6> ** Drive PDF File ** </h6>
+                <!-- <h5> ลงชื่อเข้าใช้งานเรียบร้อย</h5> 
+                <h6 id="name">Username</h6>
+                -->
+            </div>
+
+
+
+
+
+            <div class="card-body login-card-body">
+                <form method="post">
+
+                    <div class="row justify-content-around">
+
+
+                        <div class="col-12 mt-3">
+                            <a href=""><button class="btn btn-light btn-block " type="button">
+                                    </i> PDF ใบลาป่วย / ใบลากิจ (ปิดการใช้งาน)</button></a>
+                        </div>
+
+                        <div class="col-12 mt-3">
+                            <a href=""><button class="btn btn-light btn-block " type="button">
+                                    </i> PDF ใบลาพักผ่อน (ปิดการใช้งาน)</button></a>
+                        </div>
+
+
+                        <div class="col-12 mt-3">
+                            <a href="https://drive.google.com/drive/folders/12zNNxqrMNmylLRWpTYyTeWlNZ8VgDuxO"><button class="btn btn-secondary btn-block" type="button">
+                                    </i> PDF ใบขออนุญาตออกนอกสถานที่ </button></a>
+                        </div>
+
+                        <!-- <div class="col-12 mt-3">
+                            <a href="#.html"><button class="btn btn-secondary btn-block" type="button">
+                                    </i> PDF File </button></a>
+                        </div> -->
+                        <!--//icon //<i class="fas fa-receipt"></i> //-->
+
+
+                        
+                        <div class="col-12 mt-3">
+                            <a href="home.html"><button class="btn btn-light btn-block " type="button"><i
+                                        class="fa fa-bookmark"></i> กลับสู่หน้าหลัก </button></a>
+                        </div>
+                        
+
+                        <div class="col-12 mt-3">
+                            <button id="logout" class="btn btn-success btn-block " type="Button" name="LogoutButton"
+                                style="margin-bottom: 5px;"><i class="fas fa-sign-out-alt"></i>
+                                ออกจากระบบ</button>
+                        </div>
+
+
+
+
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+    <script src="js/home.js"></script>
+
+    <!-- <script>
+        checkLogin();
+
+        function checkLogin() {
+            var username = localStorage.getItem("username")
+            if (!username) {
+                window.location = "login.html"
+            }
+            else {
+                document.getElementById("name").innerHTML = "ผู้ใช้งาน : " + username
+            }
+        }
+
+        // function headinput(){
+        //     var xhead = document.getElementById("headhome");
+        //     xhead.innerHTML = "test.html"
+        // }
+
+    </script> -->
+
+
+
+    <script src="dist/js/adminlte.min.js"></script>
+    <script src="plugins/jquery/jquery.min.js"></script>
+    <script>
+        //var userlog = localStorage.getItem("username")
+        //console.log(userlog);
+    </script>
+</body>
+
+</html>

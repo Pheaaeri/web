@@ -1,17 +1,19 @@
 //run script for open form & submit form
 
 //Function ส่งข้อมูล
-leavesick();
 function leavesick() {
     const scriptURL = 'https://script.google.com/macros/s/AKfycbyq31gYJPqvDXgGECjPCN-R4Qu_AL4ZawpG_9hYjjz6Q_kP-WfZlKtSPg2LbJ2ObNIJFw/exec'
     const form = document.forms['formleavesick'] //formleavesick คือ FormName
 
     form.addEventListener('submit', e => {
         e.preventDefault()
+
+        //หน้ากำลังบันทึกมูล
+        Loading();
+
         fetch(scriptURL, { method: 'POST', body: new FormData(form) })
 
             //สำเร็จ
-            //.then(response => alert("บันทึกข้อมูลเรียบร้อยแล้ว..."))
             .then(response => JSalert())
 
             //ไม่สำเร็จ
@@ -19,29 +21,38 @@ function leavesick() {
     })
 };
 
-// function formResetdata() {
-//     document.getElementById("formleavesick").reset();
-//     setTimeout(5000);
-//     Reform();
-// };
+//ระบบกันโง่กดบันทึกข้อมูลหลายครั้ง
+function Loading() {
+    setTimeout(function () {
+        swal({
+            title: "ระบบกำลังบันทึกข้อมูล",
+            text: "กรุณารอสักครู่...อาจใช้เวลาประมาณ 5-10 วินาที",
+            showConfirmButton: false //ปิดการแสดงปุ่มคอนเฟิร์ม ถ้าแก้เป็น true จะแสดงปุ่ม ok ให้คลิกเหมือนเดิม
+            //type: "success",
+        })
+    });
+};
 
-// สำเร็จ 
-// .then(response => alert("บันทึกข้อมูลเรียบร้อยแล้ว..."),
-// setTimeout(() => {
-//     Reform()
-// }, 3000))
-
+//ระบบแสดงข้อความเมื่อทึกข้อมูลเสร็จแล้ว
 function JSalert() {
-    swal("บันทึกข้อมูลเรียบร้อย", ", Your account is created!", "success");
-}
-
-// function Reform() {
-//     window.location = './home.html' //=> เมื่อ ResetForm เสร็จแล้ว โหลดหน้า leave-sick.html *หน้าฟอร์มลาป่วยลากิจ*
-// };
+    setTimeout(function () {
+        swal({
+            title: "บันทึกข้อมูลเรียบร้อย",
+            text: "ระบบจะกลับสู่หน้าหลักอัตโนมัติ",
+            showConfirmButton: false, //ปิดการแสดงปุ่มคอนเฟิร์ม ถ้าแก้เป็น true จะแสดงปุ่ม ok ให้คลิกเหมือนเดิม          
+            type: "success",
+            timer: 5000, //ระยะเวลา redirect 5000 = 5 วิ เพิ่มลดได้
+        }, function () {
+            window.location = "home.html" //หรือหน้า PDF
+        })
+    });
+};
 
 //เมื่อกดส่งข้อมูล ->
 //ฟอร์มยันยันข้อมูล
 function chaaa() {
+    ///run Function ส่งข้อมูล
+    leavesick();
 
     //ข้าพเจ้า
     let na0 = localStorage.getItem("username")

@@ -23,10 +23,13 @@ function loaddatalsday() {
 
     // แปลง string เป็น JSON
     objPeople = JSON.parse(xmlHttp.responseText);
+
+    //run Functio รับข้อมูล-ข้อมูลประวัติวันลาพักผ่อน
+    //apilsday();
 }
 
-//Function รับข้อมูล-ข้อมูลประวัติวันลาพักผ่อน
 apilsday();
+//Function รับข้อมูล-ข้อมูลประวัติวันลาพักผ่อน
 function apilsday() {
     let ulname = localStorage.getItem("username")
     let uid = objPeople.find((value) => { return (value.username == ulname) });
@@ -55,45 +58,11 @@ function apilsday() {
     //console.log(lssum);
 }
 
-//Function ส่งข้อมูล
-leavesacation();
-function leavesacation() {
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbwJdUh2e_3ntvgirHPOkgoh9ISHAs53ovxy6mzpDTpAO9fyJeJ6JV0qa-kIslo8ioUjsg/exec'
-    const form = document.forms['formsacation'] //formsacation คือ FormName
-
-    form.addEventListener('submit', e => {
-        e.preventDefault()
-        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-
-            //สำเร็จ
-            .then(response => JSalert())
-
-            //ไม่สำเร็จ
-            .catch(error => console.error('Error!', error.message))
-    })
-};
-
-//Function ตอบกลับ-ส่งข้อมูล
-
-function JSalert() {
-    setTimeout(function () {
-        swal({
-            title: "บันทึกข้อมูลเรียบร้อย",
-            text: "กรุณารอสักครูกำลังไปหาสั้งปริ้น",
-            type: "success",
-        },function () {    
-            window.location = "home.html"
-        })
-    });
-};
-
-
-
 //เมื่อกดส่งข้อมูล ->
 //ฟอร์มยันยันข้อมูล
 function checkformpopup() {
-
-
+    //run Function ส่งข้อมูล
+    leavesacation();
 
     //ข้าพเจ้า
     let na0 = localStorage.getItem("username")
@@ -126,11 +95,51 @@ function checkformpopup() {
     //ผู้อนุมัติ
     let na7 = document.getElementById("ran7").value
     document.getElementById("rown7").value = na7
+};
 
+//Function ส่งข้อมูล
+function leavesacation() {
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxyHFNBNJxI3SQSTzSdm80nQJyzuFF7ARXCJ89y2cRUg6mvGP3ZoFbOTdIBqTqnBMeY/exec'
+    const form = document.forms['formsacation'] //formsacation คือ FormName
 
-    // let na8 = document.getElementById("ran8").value
-    // document.getElementById("rown8").value = na8
+    form.addEventListener('submit', e => {
+        e.preventDefault()
 
-    //onclick="getInfo()"
-    //console.log(ra);
-}
+        Loading() //หน้ากำลังบันทึกมูล
+
+        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+
+            //สำเร็จ
+            .then(response => JSalert())
+
+            //ไม่สำเร็จ
+            .catch(error => console.error('Error!', error.message))
+    })
+};
+
+//ระบบกันโง่กดบันทึกข้อมูลหลายครั้ง
+function Loading() {
+    setTimeout(function () {
+        swal({
+            title: "ระบบกำลังบันทึกข้อมูล",
+            text: "กรุณารอสักครู่...อาจใช้เวลาประมาณ 10 วินาที",
+            showConfirmButton: false //ปิดการแสดงปุ่มคอนเฟิร์ม ถ้าแก้เป็น true จะแสดงปุ่ม ok ให้คลิกเหมือนเดิม
+            //type: "success",
+        })
+    });
+};
+
+//ระบบแสดงข้อความเมื่อทึกข้อมูลเสร็จแล้ว
+function JSalert() {
+    setTimeout(function () {
+        swal({
+            title: "บันทึกข้อมูลเรียบร้อย",
+            text: "ระบบจะกลับสู่หน้าหลักอัตโนมัติ",
+            showConfirmButton: false, //ปิดการแสดงปุ่มคอนเฟิร์ม ถ้าแก้เป็น true จะแสดงปุ่ม ok ให้คลิกเหมือนเดิม          
+            type: "success",
+            timer: 5000, //ระยะเวลา redirect 5000 = 5 วิ เพิ่มลดได้
+        }, function () {
+            window.location = "home.html" //หรือหน้า PDF
+        })
+    });
+};
