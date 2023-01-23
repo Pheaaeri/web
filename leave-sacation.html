@@ -71,35 +71,26 @@
                 <!-- <h5> ชื่อผู้ใช้งาน <h5 id="name">Username</h5> -->
             </div>
 
-
+            <!--
             <div class="card-body login-card-body">
                 <table class="table table-bordered">
-                    <!-- <thead>
-                        <tr>
-                            <th scope="col">วันพักผ่อน</th>
-                            <th scope="col">จำนวนวัน</th>
-                        </tr>
-                    </thead> -->
-
                     <tbody>
                         <tr>
                             <th scope="row">มีวันพักผ่อนประจำปีนี้</th>
                             <td id="lsdays1">-</td>
-
                         </tr>
                         <tr>
                             <th scope="row">ลาพักผ่อนไปแล้ว</th>
                             <td id="lsdays2">-</td>
-
                         </tr>
                         <tr>
                             <th scope="row">เหลือวันพักผ่อน</th>
                             <td id="lsdays3">-</td>
-
                         </tr>
                     </tbody>
                 </table>
             </div>
+            -->
 
 
 
@@ -120,7 +111,8 @@
                     <div class="form-group row">
                         <label class="col-sm-4 col-form-label">เขียนวันที่</label>
                         <div class="col-sm-8">
-                            <input type="date" class="form-control" id="ran1" name="เขียนวันที่" placeholder="">
+                            <input type="text" class="form-control" id="" data-provide="datepicker"
+                                data-date-language="th-th" name="เขียนวันที่" placeholder="" required>
 
                         </div>
                     </div>
@@ -128,7 +120,7 @@
                     <div class="form-group row">
                         <label class="col-sm-4 col-form-label">ประเภท</label>
                         <div class="col-sm-8">
-                            <input type="text" class="form-control" id="ran2" name="" value="ลาพักผ่อน" placeholder=""
+                            <input type="text" class="form-control" id="" name="" value="ลาพักผ่อน" placeholder=""
                                 readonly>
                         </div>
                     </div>
@@ -136,7 +128,8 @@
                     <div class="form-group row">
                         <label class="col-sm-4 col-form-label">ลาวันที่</label>
                         <div class="col-sm-8">
-                            <input type="date" class="form-control" id="ran3" name="ลาวันที่" placeholder="">
+                            <input type="text" class="form-control" id="" data-provide="datepicker"
+                                data-date-language="th-th" name="ลาวันที่" placeholder="" required>
 
                         </div>
                     </div>
@@ -144,7 +137,8 @@
                     <div class="form-group row">
                         <label class="col-sm-4 col-form-label">ถึงวันที่</label>
                         <div class="col-sm-8">
-                            <input type="date" class="form-control" id="ran4" name="ถึงวันที่" placeholder="">
+                            <input type="text" class="form-control" id="" data-provide="datepicker"
+                                data-date-language="th-th" name="ถึงวันที่" placeholder="" required>
 
                         </div>
                     </div>
@@ -152,8 +146,8 @@
                     <div class="form-group row">
                         <label class="col-sm-4 col-form-label">มีกำหนด</label>
                         <div class="col-sm-8">
-                            <select type="number" class="form-control" id="ran5" name="มีกำหนด" placeholder=""
-                                required="required">
+                            <select type="number" class="form-control" id="" name="มีกำหนด" placeholder=""
+                                required>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -177,8 +171,8 @@
                         <label class="col-sm-4 col-form-label">ผู้ตรวจสอบ</label>
                         <div class="col-sm-8">
                             <!-- ทำเลือกชื่อผู้ใช้งาน -->
-                            <select type="text" class="form-control" id="ran6" name="ผู้ตรวจสอบ" placeholder=""
-                                required="required">
+                            <select type="text" class="form-control" id="" name="ผู้ตรวจสอบ" placeholder=""
+                                required>
                                 <option value="นายณัฐสิทธิ์ อยู่เย็น">นายณัฐสิทธิ์ อยู่เย็น</option>
                                 <option value="นายอนุชิต ฉ่ำสิงห์">นายอนุชิต ฉ่ำสิงห์</option>
 
@@ -190,7 +184,7 @@
                         <label class="col-sm-4 col-form-label">ผู้อนุมัติ</label>
                         <div class="col-sm-8">
                             <!-- ทำเลือกชื่อผู้ใช้งาน -->
-                            <select type="text" class="form-control" id="ran7" name="ผู้อนุมัติ" placeholder=""
+                            <select type="text" class="form-control" id="" name="ผู้อนุมัติ" placeholder=""
                                 required="required">
                                 <option value="นายอนุชิต ฉ่ำสิงห์">นายอนุชิต ฉ่ำสิงห์</option>
                                 <option value="นางสาวปรีดาวรรณ ไชยศรีชลธาร">นางสาวปรีดาวรรณ
@@ -216,123 +210,29 @@
                                 <option value="ร-นายสุรชาติ ระย้าทอง">สุรชาติ ระย้าทอง (รักษาการแทน)</option>
                                 <option value="นายอัคคพล เสนาณรงค์">นายอัคคพล
                                     เสนาณรงค์(ผู้อำนวยการสถาบันวิจัยเกษตรวิศวกรรม)</option>
-
-
-
                             </select>
                         </div>
                     </div>
 
+                    <p style="font-size:13px; color:red;"> *** การบันทึกข้อมูลจะใช้เวลาประมาณ 10
+                        วินาที กรุณารอสักครู่เมื่อเสร็จแล้วจะมีข้อความแจ้งเตือน ***</p>
+
                     <div class="col-12 mt-3">
-                        <button id="" class="btn btn-warning btn-block " onclick="checkformpopup()" type="button"
-                            name="FormleavesickButton" style="margin-bottom: 5px;" data-bs-target="#myModal"
-                            data-bs-toggle="modal"><i class="fas fa-sign-out-alt"></i>
-                            ส่งข้อมูล</button>
+                        <button id="" class="btn btn-success  btn-block " type="submit" name="FormleavesickButton"
+                            style="margin-bottom: 5px;"><i class="fas fa-sign-out-alt"></i>
+                            บันทึกข้อมูล</button>
                     </div>
-
-                    <!-- Modal HTML -->
-                    <div id="myModal" class="modal fade" data-bs-backdrop="static" tabindex="-1">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title">ยืนยันข้อมูล</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                                </div>
-
-                                <div class="modal-body">
-                                    <p style="color:red;">กรุณาตรวจสอบข้อมูลอีกครั้ง ก่อนกดบันทึกข้อมูล</p>
-
-                                    <div class="form-group row">
-                                        <label class="col-sm-4 col-form-label">ข้าพเจ้า</label>
-                                        <div class="col-sm-8">
-                                            <input type="text" class="form-control" id="rown0" name="-" placeholder=""
-                                                readonly>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group row">
-                                        <label class="col-sm-4 col-form-label">วันที่เขียน</label>
-                                        <div class="col-sm-8">
-                                            <input type="date" class="form-control" id="rown1" name="-" placeholder=""
-                                                readonly>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group row">
-                                        <label class="col-sm-4 col-form-label">ประเภท</label>
-                                        <div class="col-sm-8">
-                                            <input type="text" class="form-control" id="rown2" name="-" placeholder=""
-                                                readonly>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group row">
-                                        <label class="col-sm-4 col-form-label">ลาวันที่</label>
-                                        <div class="col-sm-8">
-                                            <input type="date" class="form-control" id="rown3" name="-" placeholder=""
-                                                readonly>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group row">
-                                        <label class="col-sm-4 col-form-label">ถึงวันที่</label>
-                                        <div class="col-sm-8">
-                                            <input type="date" class="form-control" id="rown4" name="-" placeholder=""
-                                                readonly>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group row">
-                                        <label class="col-sm-4 col-form-label">มีกำหนด</label>
-                                        <div class="col-sm-8">
-                                            <input type="text" class="form-control" id="rown5" name="-" placeholder=""
-                                                readonly>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group row">
-                                        <label class="col-sm-4 col-form-label">ผู้ตรวจสอบ</label>
-                                        <div class="col-sm-8">
-                                            <input type="text" class="form-control" id="rown6" name="-" placeholder=""
-                                                readonly>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group row">
-                                        <label class="col-sm-4 col-form-label">ผู้อนุมัติ</label>
-                                        <div class="col-sm-8">
-                                            <input type="text" class="form-control" id="rown7" name="-" placeholder=""
-                                                readonly>
-                                        </div>
-                                    </div>
-
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary btn-block "
-                                            data-bs-dismiss="modal">แก้ไขข้อมูล</button>
-
-                                        <button id="" class="btn btn-success  btn-block " type="submit"
-                                            name="FormleavesickButton" style="margin-bottom: 3px;"><i
-                                                class="fas fa-sign-out-alt"></i>บันทึกข้อมูล</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Modal HTML -->
-
 
                     <div class="col-12 mt-3">
                         <a href="./home.html"><button class="btn btn-light btn-block " type="button"><i
-                                    class="fa fa-bookmark"></i> กลับหน้าเมนู </button></a>
+                                    class="fa fa-bookmark"></i>
+                                กลับหน้าเมนู </button></a>
                     </div>
-
+                </form>
             </div>
-            </form>
         </div>
+    </div>
 
-    </div>
-    </div>
-    </div>
     <!-- link JS-->
     <script src="js/leave-sacation.js"></script>
 
@@ -341,6 +241,46 @@
     <script src="dist/js/adminlte.min.js"></script>
     <script src="dist/js/bootstrap.bundle.min.js"></script>
     <script src="plugins/jquery/jquery.min.js"></script>
+
+    <script src="plugins/bootstrap-datepicker-thai/css/datepicker.css"></script>
+    <script src="plugins/jquery/jquery.js"></script>
+    <script src="plugins/bootstrap-datepicker-thai/js/bootstrap-datepicker.js"></script>
+    <script src="plugins/bootstrap-datepicker-thai/js/bootstrap-datepicker-thai.js"></script>
+    <script src="plugins/bootstrap-datepicker-thai/js/locales/bootstrap-datepicker.th.js"></script>
+
+    <script id="example_script" type="text/javascript">
+        function demo() {
+            $('.datepicker').datepicker();
+        }
+    </script>
+
+    <script type="text/javascript">
+        $(function () {
+            $('pre[data-source]').each(function () {
+                var $this = $(this),
+                    $source = $($this.data('source'));
+
+                var text = [];
+                $source.each(function () {
+                    var $s = $(this);
+                    if ($s.attr('type') == 'text/javascript') {
+                        text.push($s.html().replace(/(\n)*/, ''));
+                    } else {
+                        text.push($s.clone().wrap('<div>').parent().html()
+                            .replace(/(\"(?=[[{]))/g, '\'')
+                            .replace(/\]\"/g, ']\'').replace(/\}\"/g, '\'') // javascript not support lookbehind
+                            .replace(/\&quot\;/g, '"'));
+                    }
+                });
+
+                $this.text(text.join('\n\n').replace(/\t/g, '    '));
+            });
+
+            prettyPrint();
+            demo();
+        });
+    </script>
+
 </body>
 
 </html>

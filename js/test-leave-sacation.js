@@ -12,7 +12,7 @@ function checkLogin() {
 }
 
 //Function รับข้อมูล
-//loaddatalsday();
+loaddatalsday();
 function loaddatalsday() {
     var dataJSON = "https://script.google.com/macros/s/AKfycbzhWPrzA19ABCqFRCF8o-K87xCbamWjxaf6nfA5wFd_BtM7ajSg2MWjmxDtMCR8AxA/exec";
     // get ค่าจาก url
@@ -28,7 +28,7 @@ function loaddatalsday() {
     //apilsday();
 }
 
-//apilsday();
+apilsday();
 //Function รับข้อมูล-ข้อมูลประวัติวันลาพักผ่อน
 function apilsday() {
     let ulname = localStorage.getItem("username")

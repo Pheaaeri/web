@@ -58,46 +58,47 @@ function apilsday() {
     //console.log(lssum);
 }
 
-//เมื่อกดส่งข้อมูล ->
-//ฟอร์มยันยันข้อมูล
-function checkformpopup() {
-    //run Function ส่งข้อมูล
-    leavesacation();
+// //เมื่อกดส่งข้อมูล ->
+// //ฟอร์มยันยันข้อมูล
+// function checkformpopup() {
+//     //run Function ส่งข้อมูล
+//     leavesacation();
 
-    //ข้าพเจ้า
-    let na0 = localStorage.getItem("username")
-    document.getElementById("rown0").value = na0
+//     //ข้าพเจ้า
+//     let na0 = localStorage.getItem("username")
+//     document.getElementById("rown0").value = na0
 
-    //เขียนวันที่
-    let na1 = document.getElementById("ran1").value
-    document.getElementById("rown1").value = na1
+//     //เขียนวันที่
+//     let na1 = document.getElementById("ran1").value
+//     document.getElementById("rown1").value = na1
 
-    //***ประเภทการลา
-    let na2 = document.getElementById("ran2").value
-    document.getElementById("rown2").value = na2
+//     //***ประเภทการลา
+//     let na2 = document.getElementById("ran2").value
+//     document.getElementById("rown2").value = na2
 
-    //ลาวันที่
-    let na3 = document.getElementById("ran3").value
-    document.getElementById("rown3").value = na3
+//     //ลาวันที่
+//     let na3 = document.getElementById("ran3").value
+//     document.getElementById("rown3").value = na3
 
-    //ถึงวันที่
-    let na4 = document.getElementById("ran4").value
-    document.getElementById("rown4").value = na4
+//     //ถึงวันที่
+//     let na4 = document.getElementById("ran4").value
+//     document.getElementById("rown4").value = na4
 
-    //มีกำหนด
-    let na5 = document.getElementById("ran5").value
-    document.getElementById("rown5").value = na5
+//     //มีกำหนด
+//     let na5 = document.getElementById("ran5").value
+//     document.getElementById("rown5").value = na5
 
-    //ผู้ตรวจสอบ
-    let na6 = document.getElementById("ran6").value
-    document.getElementById("rown6").value = na6
+//     //ผู้ตรวจสอบ
+//     let na6 = document.getElementById("ran6").value
+//     document.getElementById("rown6").value = na6
 
-    //ผู้อนุมัติ
-    let na7 = document.getElementById("ran7").value
-    document.getElementById("rown7").value = na7
-};
+//     //ผู้อนุมัติ
+//     let na7 = document.getElementById("ran7").value
+//     document.getElementById("rown7").value = na7
+// };
 
 //Function ส่งข้อมูล
+leavesacation();
 function leavesacation() {
     const scriptURL = 'https://script.google.com/macros/s/AKfycbxyHFNBNJxI3SQSTzSdm80nQJyzuFF7ARXCJ89y2cRUg6mvGP3ZoFbOTdIBqTqnBMeY/exec'
     const form = document.forms['formsacation'] //formsacation คือ FormName
