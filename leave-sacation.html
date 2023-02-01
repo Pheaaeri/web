@@ -52,10 +52,6 @@
 <body class="login-page"
     style="background-repeat: no-repeat; background-size: cover; background-position: center center; min-height: 1420px;">
 
-
-
-
-
     <!-- Class ลงชื่อเข้าใช้งาน -->
     <div class="login-box">
         <div class="card">
@@ -65,32 +61,29 @@
                     <img class="mb-4 mt-3" src="img/doaweb.png" alt="" width="80" height="80">
                 </div>
 
-
                 <h2> PhegaeriOnline </h2>
                 <h5> แบบฟอร์มใบลาพักผ่อน </h5>
-                <!-- <h5> ชื่อผู้ใช้งาน <h5 id="name">Username</h5> -->
             </div>
 
-            <!--
             <div class="card-body login-card-body">
                 <table class="table table-bordered">
                     <tbody>
                         <tr>
                             <th scope="row">มีวันพักผ่อนประจำปีนี้</th>
-                            <td id="lsdays1">-</td>
+                            <td align="right" id="lsdays1">- วัน</td>
                         </tr>
                         <tr>
                             <th scope="row">ลาพักผ่อนไปแล้ว</th>
-                            <td id="lsdays2">-</td>
+                            <td align="right" id="lsdays2">- วัน</td>
                         </tr>
                         <tr>
                             <th scope="row">เหลือวันพักผ่อน</th>
-                            <td id="lsdays3">-</td>
+                            <td align="right" id="lsdays3">- วัน</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-            -->
+
 
 
 
@@ -103,7 +96,7 @@
                     <div class="form-group row">
                         <label class="col-sm-4 col-form-label">ข้าพเจ้า</label>
                         <div class="col-sm-8">
-                            <input type="text" class="form-control" id="log2" name="ข้าพเจ้า" placeholder="" readonly>
+                            <input type="text" class="form-control" id="log2" name="ข้าพเจ้า" readonly>
 
                         </div>
                     </div>
@@ -112,7 +105,7 @@
                         <label class="col-sm-4 col-form-label">เขียนวันที่</label>
                         <div class="col-sm-8">
                             <input type="text" class="form-control" id="" data-provide="datepicker"
-                                data-date-language="th-th" name="เขียนวันที่" placeholder="" required>
+                                data-date-language="th-th" name="เขียนวันที่" placeholder="01/01/2566" required>
 
                         </div>
                     </div>
@@ -120,8 +113,7 @@
                     <div class="form-group row">
                         <label class="col-sm-4 col-form-label">ประเภท</label>
                         <div class="col-sm-8">
-                            <input type="text" class="form-control" id="" name="" value="ลาพักผ่อน" placeholder=""
-                                readonly>
+                            <input type="text" class="form-control" id="" name="ลาพักผ่อน" value="ลาพักผ่อน" readonly>
                         </div>
                     </div>
 
@@ -129,7 +121,7 @@
                         <label class="col-sm-4 col-form-label">ลาวันที่</label>
                         <div class="col-sm-8">
                             <input type="text" class="form-control" id="" data-provide="datepicker"
-                                data-date-language="th-th" name="ลาวันที่" placeholder="" required>
+                                data-date-language="th-th" name="ลาวันที่" placeholder="01/01/2566" required>
 
                         </div>
                     </div>
@@ -138,7 +130,7 @@
                         <label class="col-sm-4 col-form-label">ถึงวันที่</label>
                         <div class="col-sm-8">
                             <input type="text" class="form-control" id="" data-provide="datepicker"
-                                data-date-language="th-th" name="ถึงวันที่" placeholder="" required>
+                                data-date-language="th-th" name="ถึงวันที่" placeholder="01/01/2566" required>
 
                         </div>
                     </div>
@@ -146,8 +138,7 @@
                     <div class="form-group row">
                         <label class="col-sm-4 col-form-label">มีกำหนด</label>
                         <div class="col-sm-8">
-                            <select type="number" class="form-control" id="" name="มีกำหนด" placeholder=""
-                                required>
+                            <select type="number" class="form-control" id="" name="มีกำหนด" required>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -171,8 +162,7 @@
                         <label class="col-sm-4 col-form-label">ผู้ตรวจสอบ</label>
                         <div class="col-sm-8">
                             <!-- ทำเลือกชื่อผู้ใช้งาน -->
-                            <select type="text" class="form-control" id="" name="ผู้ตรวจสอบ" placeholder=""
-                                required>
+                            <select type="text" class="form-control" id="" name="ผู้ตรวจสอบ" required>
                                 <option value="นายณัฐสิทธิ์ อยู่เย็น">นายณัฐสิทธิ์ อยู่เย็น</option>
                                 <option value="นายอนุชิต ฉ่ำสิงห์">นายอนุชิต ฉ่ำสิงห์</option>
 
@@ -184,12 +174,11 @@
                         <label class="col-sm-4 col-form-label">ผู้อนุมัติ</label>
                         <div class="col-sm-8">
                             <!-- ทำเลือกชื่อผู้ใช้งาน -->
-                            <select type="text" class="form-control" id="" name="ผู้อนุมัติ" placeholder=""
-                                required="required">
+                            <select type="text" class="form-control" id="" name="ผู้อนุมัติ" required="required">
                                 <option value="นายอนุชิต ฉ่ำสิงห์">นายอนุชิต ฉ่ำสิงห์</option>
-                                <option value="นางสาวปรีดาวรรณ ไชยศรีชลธาร">นางสาวปรีดาวรรณ
+                                <option value="ป-นางสาวปรีดาวรรณ ไชยศรีชลธาร">นางสาวปรีดาวรรณ
                                     ไชยศรีชลธาร (ปฏิบัติราชการแทน)</option>
-                                <option value="นายปรีชา อานันท์รัตนกุล">นายปรีชา อานันท์รัตนกุล (ปฏิบัติราชการแทน)
+                                <option value="ป-นายปรีชา อานันท์รัตนกุล">นายปรีชา อานันท์รัตนกุล (ปฏิบัติราชการแทน)
                                 </option>
                                 <option value="ป-นายจิรวัสส์ เจียตระกูล">นายจิรวัสส์ เจียตระกูล (ปฏิบัติราชการแทน)
                                 </option>
@@ -218,7 +207,7 @@
                         วินาที กรุณารอสักครู่เมื่อเสร็จแล้วจะมีข้อความแจ้งเตือน ***</p>
 
                     <div class="col-12 mt-3">
-                        <button id="" class="btn btn-success  btn-block " type="submit" name="FormleavesickButton"
+                        <button id="" class="btn btn-success  btn-block " type="submit" name="submit"
                             style="margin-bottom: 5px;"><i class="fas fa-sign-out-alt"></i>
                             บันทึกข้อมูล</button>
                     </div>
@@ -248,38 +237,6 @@
     <script src="plugins/bootstrap-datepicker-thai/js/bootstrap-datepicker-thai.js"></script>
     <script src="plugins/bootstrap-datepicker-thai/js/locales/bootstrap-datepicker.th.js"></script>
 
-    <script id="example_script" type="text/javascript">
-        function demo() {
-            $('.datepicker').datepicker();
-        }
-    </script>
-
-    <script type="text/javascript">
-        $(function () {
-            $('pre[data-source]').each(function () {
-                var $this = $(this),
-                    $source = $($this.data('source'));
-
-                var text = [];
-                $source.each(function () {
-                    var $s = $(this);
-                    if ($s.attr('type') == 'text/javascript') {
-                        text.push($s.html().replace(/(\n)*/, ''));
-                    } else {
-                        text.push($s.clone().wrap('<div>').parent().html()
-                            .replace(/(\"(?=[[{]))/g, '\'')
-                            .replace(/\]\"/g, ']\'').replace(/\}\"/g, '\'') // javascript not support lookbehind
-                            .replace(/\&quot\;/g, '"'));
-                    }
-                });
-
-                $this.text(text.join('\n\n').replace(/\t/g, '    '));
-            });
-
-            prettyPrint();
-            demo();
-        });
-    </script>
 
 </body>
 

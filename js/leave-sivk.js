@@ -1,6 +1,65 @@
 //run script for open form & submit form
+checkLogin();
+function checkLogin() {
+    var username = localStorage.getItem("username")
+    if (!username) {
+        window.location = "login.html"
+    }
+    else {
+        //document.getElementById("name").innerHTML = username
+        document.getElementById("log2").value = username
+    }
+}
+
+//Function รับข้อมูล
+loaddatalsday();
+function loaddatalsday() {
+    var dataJSON = "https://script.google.com/macros/s/AKfycbzhWPrzA19ABCqFRCF8o-K87xCbamWjxaf6nfA5wFd_BtM7ajSg2MWjmxDtMCR8AxA/exec";
+    // get ค่าจาก url
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open("GET", dataJSON, false); // false for synchronous request
+    xmlHttp.send(null);
+    obj = xmlHttp.responseText;
+
+    // แปลง string เป็น JSON
+    objPeople = JSON.parse(xmlHttp.responseText);
+
+    //run Functio รับข้อมูล-ข้อมูลประวัติวันลาพักผ่อน
+    //apilsday();
+}
+
+apilsday();
+//Function รับข้อมูล-ข้อมูลประวัติวันลาพักผ่อน
+function apilsday() {
+    let ulname = localStorage.getItem("username")
+    let uid = objPeople.find((value) => { return (value.username == ulname) });
+    //flat ดึงข้อมูลทั้งหมด
+
+    //ดึงข้อมูลส่วนบุคคล value.username = usernamelogin
+    //uid = Jsondata
+
+    //มีวันพักผ่อนประจำปีนี้
+    let lsday = uid.swuserday
+    let swuserday = document.getElementById("swuserday");
+    swuserday.innerHTML = lsday + " วัน";
+    //document.getElementById("lsday1").value = lsday
+
+    //ลาป่วยไปแล้ว
+    let used = uid.swuser1
+    let swuser1 = document.getElementById("swuser1");
+    swuser1.innerHTML = used + " วัน";
+    //document.getElementById("lsday2").value = used
+
+    //ลากิจไปแล้ว
+    let lssum = uid.swuser2
+    let lswuser2 = document.getElementById("swuser2");
+    swuser2.innerHTML = lssum + " วัน";
+    // document.getElementById("lsday3").value = lssum
+    //console.log(lssum);
+}
 
 //Function ส่งข้อมูล
+leavesick();
 function leavesick() {
     const scriptURL = 'https://script.google.com/macros/s/AKfycbyq31gYJPqvDXgGECjPCN-R4Qu_AL4ZawpG_9hYjjz6Q_kP-WfZlKtSPg2LbJ2ObNIJFw/exec'
     const form = document.forms['formleavesick'] //formleavesick คือ FormName
@@ -47,49 +106,3 @@ function JSalert() {
         })
     });
 };
-
-//เมื่อกดส่งข้อมูล ->
-//ฟอร์มยันยันข้อมูล
-function chaaa() {
-    ///run Function ส่งข้อมูล
-    leavesick();
-
-    //ข้าพเจ้า
-    let na0 = localStorage.getItem("username")
-    document.getElementById("rown0").value = na0
-
-    //เขียนวันที่
-    let na1 = document.getElementById("ran1").value
-    document.getElementById("rown1").value = na1
-
-    //ประเภทการลา
-    let na2 = document.getElementById("ran2").value
-    document.getElementById("rown2").value = na2
-
-    //ลาวันที่
-    let na3 = document.getElementById("ran3").value
-    document.getElementById("rown3").value = na3
-
-    //ถึงวันที่
-    let na4 = document.getElementById("ran4").value
-    document.getElementById("rown4").value = na4
-
-    //มีกำหนด
-    let na5 = document.getElementById("ran5").value
-    document.getElementById("rown5").value = na5
-
-    //เนื่องจาก
-    let na6 = document.getElementById("ran6").value
-    document.getElementById("rown6").value = na6
-
-    //ผู้ตรวจสอบ
-    let na7 = document.getElementById("ran7").value
-    document.getElementById("rown7").value = na7
-
-    //ผู้อนุมัติ
-    let na8 = document.getElementById("ran8").value
-    document.getElementById("rown8").value = na8
-
-    //onclick="getInfo()"
-    //console.log(ra);
-}
