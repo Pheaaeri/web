@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- <base target="_top"> -->
+    <title>ใบลาพักผ่อน</title>
+    <link rel="shortcut icon">
+
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+
+    <!-- DataTables -->
+    <link rel="stylesheet" href="plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+    <!-- Select2 -->
+    <link rel="stylesheet" href="plugins/select2/css/select2.min.css" />
+    <link rel="stylesheet" href="plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css" />
+    <!-- Theme style **โครงสร้าง** -->
+    <link rel="stylesheet" href="dist/css/adminlte.css">
+
+    <link rel="stylesheet" href="dist/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="dist/css/sweetalert.min.css">
+
+    <!-- Google Font: Source Sarabun -->
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@100;300;500;700&amp;display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="login-page"
+    style="background-repeat: no-repeat; background-size: cover; background-position: center center; min-height: 1420px;">
+
+    <!-- Class ลงชื่อเข้าใช้งาน -->
+    <div class="login-box">
+        <div class="card">
+
+            <div class="login-logo">
+                <div>
+                    <img class="mb-4 mt-3" src="img/doaweb.png" alt="" width="80" height="80">
+                </div>
+
+                <h2> PhegaeriOnline </h2>
+                <h5> แบบฟอร์มขออนุญาติให้รถส่วนกลาง </h5>
+            </div>
+
+            <!--
+            <div class="card-body login-card-body">
+                <table class="table table-bordered">
+                    <tbody>
+                        <tr>
+                            <th scope="row">มีวันพักผ่อนประจำปีนี้</th>
+                            <td align="right" id="lsdays1">- วัน</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">ลาพักผ่อนไปแล้ว</th>
+                            <td align="right" id="lsdays2">- วัน</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">เหลือวันพักผ่อน</th>
+                            <td align="right" id="lsdays3">- วัน</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            -->
+
+            <!-- Form leave-sacation -->
+            <div class="card-body login-card-body">
+                <form method="post" id="formcarout">
+
+                    <!-- <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">ข้าพเจ้า</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="log2" name="ข้าพเจ้า" readonly>
+
+                        </div>
+                    </div> -->
+
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">ข้าพเจ้า</label>
+                        <div class="col-sm-8">
+                            <select type="number" class="form-control" id="" name="ข้าพเจ้า" required>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                            </select>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">เขียนวันที่</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="" data-provide="datepicker"
+                                data-date-language="th-th" name="เขียนวันที่" placeholder="01/01/2566" required>
+
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">ประเภท</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="" name="ลาพักผ่อน" value="ลาพักผ่อน" readonly>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">ลาวันที่</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="" data-provide="datepicker"
+                                data-date-language="th-th" name="ลาวันที่" placeholder="01/01/2566" required>
+
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">ถึงวันที่</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="" data-provide="datepicker"
+                                data-date-language="th-th" name="ถึงวันที่" placeholder="01/01/2566" required>
+
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">มีกำหนด</label>
+                        <div class="col-sm-8">
+                            <select type="number" class="form-control" id="" name="มีกำหนด" required>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">ผู้ตรวจสอบ</label>
+                        <div class="col-sm-8">
+                            <!-- ทำเลือกชื่อผู้ใช้งาน -->
+                            <select type="text" class="form-control" id="" name="ผู้ตรวจสอบ" required>
+                                <option value="นายณัฐสิทธิ์ อยู่เย็น">นายณัฐสิทธิ์ อยู่เย็น</option>
+                                <option value="นายอนุชิต ฉ่ำสิงห์">นายอนุชิต ฉ่ำสิงห์</option>
+
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">ผู้อนุมัติ</label>
+                        <div class="col-sm-8">
+                            <!-- ทำเลือกชื่อผู้ใช้งาน -->
+                            <select type="text" class="form-control" id="" name="ผู้อนุมัติ" required="required">
+                                <option value="นายอนุชิต ฉ่ำสิงห์">นายอนุชิต ฉ่ำสิงห์</option>
+                                <option value="ป-นางสาวปรีดาวรรณ ไชยศรีชลธาร">นางสาวปรีดาวรรณ
+                                    ไชยศรีชลธาร (ปฏิบัติราชการแทน)</option>
+                                <option value="ป-นายปรีชา อานันท์รัตนกุล">นายปรีชา อานันท์รัตนกุล (ปฏิบัติราชการแทน)
+                                </option>
+                                <option value="ป-นายจิรวัสส์ เจียตระกูล">นายจิรวัสส์ เจียตระกูล (ปฏิบัติราชการแทน)
+                                </option>
+                                <option value="ป-นายปริญญวัฒน์ อยู่ทองอินทร์">นายปริญญวัฒน์
+                                    อยู่ทองอินทร์ (ปฏิบัติราชการแทน)</option>
+                                <option value="ป-นายคชธร อ่างบุญพงษ์">นายคชธร อ่างบุญพงษ์ (ปฏิบัติราชการแทน)</option>
+                                <option value="ป-นายณัฐสิทธิ์ อยู่เย็น">นายณัฐสิทธิ์ อยู่เย็น (ปฏิบัติราชการแทน)
+                                </option>
+                                <option value="ป-นายสุรชาติ ระย้าทอง">สุรชาติ ระย้าทอง (ปฏิบัติราชการแทน)</option>
+                                <option value="ร-นางสาวปรีดาวรรณ ไชยศรีชลธาร">นางสาวปรีดาวรรณ ไชยศรีชลธาร (รักษาการแทน)
+                                </option>
+                                <option value="ร-นายปรีชา อานันท์รัตนกุล">นายปรีชา อานันท์รัตนกุล (รักษาการแทน)</option>
+                                <option value="ร-นายจิรวัสส์ เจียตระกูล">นายจิรวัสส์ เจียตระกูล (รักษาการแทน)</option>
+                                <option value="ร-นายปริญญวัฒน์ อยู่ทองอินทร์">นายปริญญวัฒน์ อยู่ทองอินทร์ (รักษาการแทน)
+                                </option>
+                                <option value="ร-นายคชธร อ่างบุญพงษ์">นายคชธร อ่างบุญพงษ์ (รักษาการแทน)</option>
+                                <option value="ร-นายณัฐสิทธิ์ อยู่เย็น">นายณัฐสิทธิ์ อยู่เย็น (รักษาการแทน)</option>
+                                <option value="ร-นายสุรชาติ ระย้าทอง">สุรชาติ ระย้าทอง (รักษาการแทน)</option>
+                                <option value="นายอัคคพล เสนาณรงค์">นายอัคคพล
+                                    เสนาณรงค์(ผู้อำนวยการสถาบันวิจัยเกษตรวิศวกรรม)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <p style="font-size:13px; color:red;"> *** การบันทึกข้อมูลจะใช้เวลาประมาณ 10
+                        วินาที กรุณารอสักครู่เมื่อเสร็จแล้วจะมีข้อความแจ้งเตือน ***</p>
+
+                    <div class="col-12 mt-3">
+                        <button id="" class="btn btn-success  btn-block " type="submit" name="submit"
+                            style="margin-bottom: 5px;"><i class="fas fa-sign-out-alt"></i>
+                            บันทึกข้อมูล</button>
+                    </div>
+
+                    <div class="col-12 mt-3">
+                        <a href="./home.html"><button class="btn btn-light btn-block " type="button"><i
+                                    class="fa fa-bookmark"></i>
+                                กลับหน้าเมนู </button></a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- link JS-->
+    <script src="***"></script>
+
+    <!-- link *********** -->
+    <script src="dist/js/sweetalert.min.js"></script>
+    <script src="dist/js/adminlte.min.js"></script>
+    <script src="dist/js/bootstrap.bundle.min.js"></script>
+    <script src="plugins/jquery/jquery.min.js"></script>
+
+    <script src="plugins/bootstrap-datepicker-thai/css/datepicker.css"></script>
+    <script src="plugins/jquery/jquery.js"></script>
+    <script src="plugins/bootstrap-datepicker-thai/js/bootstrap-datepicker.js"></script>
+    <script src="plugins/bootstrap-datepicker-thai/js/bootstrap-datepicker-thai.js"></script>
+    <script src="plugins/bootstrap-datepicker-thai/js/locales/bootstrap-datepicker.th.js"></script>
+
+
+</body>
+
+</html>
