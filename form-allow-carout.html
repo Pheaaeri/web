@@ -7,13 +7,12 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
     <!-- <base target="_top"> -->
-    <title>ใบลาพักผ่อน</title>
+    <title>แบบฟอร์มขออนุญาติให้รถส่วนกลาง</title>
     <link rel="shortcut icon">
 
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
-
     <!-- DataTables -->
     <link rel="stylesheet" href="plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" href="plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
@@ -22,14 +21,13 @@
     <link rel="stylesheet" href="plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css" />
     <!-- Theme style **โครงสร้าง** -->
     <link rel="stylesheet" href="dist/css/adminlte.css">
-
     <link rel="stylesheet" href="dist/css/bootstrap.min.css">
-
     <link rel="stylesheet" href="dist/css/sweetalert.min.css">
-
     <!-- Google Font: Source Sarabun -->
     <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@100;300;500;700&amp;display=swap"
         rel="stylesheet">
+    <!-- CSS Datepicker-thai วันที่ไทย -->
+    <link rel="stylesheet" href="plugins/bootstrap-datepicker-thai/css/datepicker.css">
 </head>
 
 <body class="login-page"
@@ -45,7 +43,7 @@
                 </div>
 
                 <h2> PhegaeriOnline </h2>
-                <h5> แบบฟอร์มขออนุญาติให้รถส่วนกลาง </h5>
+                <h5> แบบฟอร์มขออนุญาติใช้รถส่วนกลาง </h5>
             </div>
 
             <!--
@@ -81,11 +79,12 @@
                         </div>
                     </div> -->
 
+                    <!-- เลือกผู้ขออนุญาต -->
                     <div class="form-group row">
                         <label class="col-sm-4 col-form-label">ข้าพเจ้า</label>
                         <div class="col-sm-8">
                             <select type="number" class="form-control" id="" name="ข้าพเจ้า" required>
-                                <option value="1">1</option>
+                                <option value="นายคชธร อ่างบุญพงษ์">นายคชธร อ่างบุญพงษ์</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
                                 <option value="4">4</option>
@@ -104,57 +103,118 @@
                         </div>
                     </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+                    <!-- เขียนวันที่ -->
                     <div class="form-group row">
                         <label class="col-sm-4 col-form-label">เขียนวันที่</label>
                         <div class="col-sm-8">
-                            <input type="text" class="form-control" id="" data-provide="datepicker"
-                                data-date-language="th-th" name="เขียนวันที่" placeholder="01/01/2566" required>
+                            <input type="text" class="form-control" id="" name="เขียนวันที่" data-provide="datepicker"
+                                data-date-language="th-th" placeholder="01/01/2566" required>
 
                         </div>
                     </div>
 
+                    <!-- เลือกใช้รถยนต์ -->
                     <div class="form-group row">
-                        <label class="col-sm-4 col-form-label">ประเภท</label>
+                        <label class="col-sm-4 col-form-label">ใช้รถยนต์</label>
                         <div class="col-sm-8">
-                            <input type="text" class="form-control" id="" name="ลาพักผ่อน" value="ลาพักผ่อน" readonly>
+                            <select type="number" class="form-control" id="" name="ใช้รถยนต์" required>
+                                <option value="6056">กฆ-6056 (วีโก้)</option>
+                                <option value="2">ภฉ-4502</option>
+                                <option value="3">96-2706 (6ล้อ)</option>
+                                <option value="4">อย-2669 (รถตู้)</option>
+                            </select>
                         </div>
                     </div>
 
+                    <!-- วันที่ไป -->
                     <div class="form-group row">
-                        <label class="col-sm-4 col-form-label">ลาวันที่</label>
+                        <label class="col-sm-4 col-form-label">ในวันที่</label>
                         <div class="col-sm-8">
-                            <input type="text" class="form-control" id="" data-provide="datepicker"
-                                data-date-language="th-th" name="ลาวันที่" placeholder="01/01/2566" required>
-
+                            <input type="text" class="form-control" id="" name="ในวันที่" data-provide="datepicker"
+                                data-date-language="th-th" placeholder="01/01/2566" required>
                         </div>
                     </div>
 
+                    <!-- เวลาเดินทาง-->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">เวลาเดินทาง</label>
+                        <div class="col-sm-8">
+                            <select type="number" class="form-control" id="" name="เวลาเดินทาง" required>
+                                <option value="08:30">08:30</option>
+                                <option value="09:00">09:00</option>
+                                <option value="09:30">09:30</option>
+                                <option value="10:00">10:00</option>
+                                <option value="10:30">10:30</option>
+                                <option value="11:00">11:00</option>
+                                <option value="11:30">11:30</option>
+                                <option value="12:00">12:00</option>
+                                <option value="11:30">12:30</option>
+                                <option value="13:00">13:00</option>
+                                <option value="13:30">13:30</option>
+                                <option value="14:00">14:00</option>
+                                <option value="14:30">14:30</option>
+                                <option value="15:00">15:00</option>
+                                <option value="15:30">15:30</option>
+                                <option value="16:00">16:00</option>
+                                <option value="16:30">16:30</option>
+                                <option value="16:00">17:00</option>
+                                <option value="16:30">17:30</option>
+                                <option value="16:00">18:00</option>
+                                <option value="16:30">18:30</option>
+                                <option value="16:00">19:00</option>
+                                <option value="16:30">19:30</option>
+                                <option value="16:00">20:00</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- ถึงวันที่ -->
                     <div class="form-group row">
                         <label class="col-sm-4 col-form-label">ถึงวันที่</label>
                         <div class="col-sm-8">
-                            <input type="text" class="form-control" id="" data-provide="datepicker"
-                                data-date-language="th-th" name="ถึงวันที่" placeholder="01/01/2566" required>
-
+                            <input type="text" class="form-control" id="" name="ถึงวันที่" data-provide="datepicker"
+                                data-date-language="th-th" placeholder="01/01/2566" required>
                         </div>
                     </div>
 
+                    <!-- เวลากลับ -->
                     <div class="form-group row">
-                        <label class="col-sm-4 col-form-label">มีกำหนด</label>
+                        <label class="col-sm-4 col-form-label">เวลากลับ</label>
                         <div class="col-sm-8">
-                            <select type="number" class="form-control" id="" name="มีกำหนด" required>
+                            <select type="number" class="form-control" id="" name="เวลากลับ" required>
+                                <option value="08:30">08:30</option>
+                                <option value="09:00">09:00</option>
+                                <option value="09:30">09:30</option>
+                                <option value="10:00">10:00</option>
+                                <option value="10:30">10:30</option>
+                                <option value="11:00">11:00</option>
+                                <option value="11:30">11:30</option>
+                                <option value="12:00">12:00</option>
+                                <option value="11:30">12:30</option>
+                                <option value="13:00">13:00</option>
+                                <option value="13:30">13:30</option>
+                                <option value="14:00">14:00</option>
+                                <option value="14:30">14:30</option>
+                                <option value="15:00">15:00</option>
+                                <option value="15:30">15:30</option>
+                                <option value="16:00">16:00</option>
+                                <option value="16:30">16:30</option>
+                                <option value="16:00">17:00</option>
+                                <option value="16:30">17:30</option>
+                                <option value="16:00">18:00</option>
+                                <option value="16:30">18:30</option>
+                                <option value="16:00">19:00</option>
+                                <option value="16:30">19:30</option>
+                                <option value="16:00">20:00</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- เลือกจำนวนคนนั่ง -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">มีคนนั่ง</label>
+                        <div class="col-sm-8">
+                            <select type="number" class="form-control" id="" name="มีคนนั่ง" required>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -174,22 +234,25 @@
                         </div>
                     </div>
 
+                    <!-- เลือกพนังงานขับรถ -->
                     <div class="form-group row">
-                        <label class="col-sm-4 col-form-label">ผู้ตรวจสอบ</label>
+                        <label class="col-sm-4 col-form-label">พนักงานขับรถยนต์</label>
                         <div class="col-sm-8">
-                            <!-- ทำเลือกชื่อผู้ใช้งาน -->
-                            <select type="text" class="form-control" id="" name="ผู้ตรวจสอบ" required>
+                            <select type="text" class="form-control" id="" name="พนักงานขับรถยนต์" required>
+                                <option value="นายมาโนช เงินมี">นายมาโนช เงินมี</option>
+                                <option value="นายอนุชา ชมดง">นายอนุชา ชมดง</option>
+                                <option value="นายอภิชาติ ยิ่งวุฒิวรกุล">นายอภิชาติ ยิ่งวุฒิวรกุล</option>
                                 <option value="นายณัฐสิทธิ์ อยู่เย็น">นายณัฐสิทธิ์ อยู่เย็น</option>
-                                <option value="นายอนุชิต ฉ่ำสิงห์">นายอนุชิต ฉ่ำสิงห์</option>
-
+                                <option value="นายสุรชาติ ระย้าทอง">นายสุรชาติ ระย้าทอง</option>
+                                <option value="นายจิรวัสส์ เจียตระกูล">นายจิรวัสส์ เจียตระกูล</option>
                             </select>
                         </div>
                     </div>
 
+                    <!-- เลือกผู้อนุมัติ -->
                     <div class="form-group row">
                         <label class="col-sm-4 col-form-label">ผู้อนุมัติ</label>
                         <div class="col-sm-8">
-                            <!-- ทำเลือกชื่อผู้ใช้งาน -->
                             <select type="text" class="form-control" id="" name="ผู้อนุมัติ" required="required">
                                 <option value="นายอนุชิต ฉ่ำสิงห์">นายอนุชิต ฉ่ำสิงห์</option>
                                 <option value="ป-นางสาวปรีดาวรรณ ไชยศรีชลธาร">นางสาวปรีดาวรรณ
@@ -200,21 +263,24 @@
                                 </option>
                                 <option value="ป-นายปริญญวัฒน์ อยู่ทองอินทร์">นายปริญญวัฒน์
                                     อยู่ทองอินทร์ (ปฏิบัติราชการแทน)</option>
-                                <option value="ป-นายคชธร อ่างบุญพงษ์">นายคชธร อ่างบุญพงษ์ (ปฏิบัติราชการแทน)</option>
+                                <option value="ป-นายคชธร อ่างบุญพงษ์">นายคชธร อ่างบุญพงษ์ (ปฏิบัติราชการแทน)
+                                </option>
                                 <option value="ป-นายณัฐสิทธิ์ อยู่เย็น">นายณัฐสิทธิ์ อยู่เย็น (ปฏิบัติราชการแทน)
                                 </option>
                                 <option value="ป-นายสุรชาติ ระย้าทอง">สุรชาติ ระย้าทอง (ปฏิบัติราชการแทน)</option>
-                                <option value="ร-นางสาวปรีดาวรรณ ไชยศรีชลธาร">นางสาวปรีดาวรรณ ไชยศรีชลธาร (รักษาการแทน)
+                                <option value="ร-นางสาวปรีดาวรรณ ไชยศรีชลธาร">นางสาวปรีดาวรรณ ไชยศรีชลธาร
+                                    (รักษาการแทน)
                                 </option>
-                                <option value="ร-นายปรีชา อานันท์รัตนกุล">นายปรีชา อานันท์รัตนกุล (รักษาการแทน)</option>
-                                <option value="ร-นายจิรวัสส์ เจียตระกูล">นายจิรวัสส์ เจียตระกูล (รักษาการแทน)</option>
-                                <option value="ร-นายปริญญวัฒน์ อยู่ทองอินทร์">นายปริญญวัฒน์ อยู่ทองอินทร์ (รักษาการแทน)
+                                <option value="ร-นายปรีชา อานันท์รัตนกุล">นายปรีชา อานันท์รัตนกุล (รักษาการแทน)
+                                </option>
+                                <option value="ร-นายจิรวัสส์ เจียตระกูล">นายจิรวัสส์ เจียตระกูล (รักษาการแทน)
+                                </option>
+                                <option value="ร-นายปริญญวัฒน์ อยู่ทองอินทร์">นายปริญญวัฒน์ อยู่ทองอินทร์
+                                    (รักษาการแทน)
                                 </option>
                                 <option value="ร-นายคชธร อ่างบุญพงษ์">นายคชธร อ่างบุญพงษ์ (รักษาการแทน)</option>
                                 <option value="ร-นายณัฐสิทธิ์ อยู่เย็น">นายณัฐสิทธิ์ อยู่เย็น (รักษาการแทน)</option>
                                 <option value="ร-นายสุรชาติ ระย้าทอง">สุรชาติ ระย้าทอง (รักษาการแทน)</option>
-                                <option value="นายอัคคพล เสนาณรงค์">นายอัคคพล
-                                    เสนาณรงค์(ผู้อำนวยการสถาบันวิจัยเกษตรวิศวกรรม)</option>
                             </select>
                         </div>
                     </div>
@@ -239,7 +305,7 @@
     </div>
 
     <!-- link JS-->
-    <script src="***"></script>
+    <script src="js/form-allow-carout.js"></script>
 
     <!-- link *********** -->
     <script src="dist/js/sweetalert.min.js"></script>
@@ -247,6 +313,7 @@
     <script src="dist/js/bootstrap.bundle.min.js"></script>
     <script src="plugins/jquery/jquery.min.js"></script>
 
+    <!-- CSS Datepicker-thai วันที่ไทย -->
     <script src="plugins/bootstrap-datepicker-thai/css/datepicker.css"></script>
     <script src="plugins/jquery/jquery.js"></script>
     <script src="plugins/bootstrap-datepicker-thai/js/bootstrap-datepicker.js"></script>
