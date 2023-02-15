@@ -71,34 +71,20 @@
             <div class="card-body login-card-body">
                 <form method="post" id="formcarout">
 
-                    <!-- <div class="form-group row">
-                        <label class="col-sm-4 col-form-label">ข้าพเจ้า</label>
-                        <div class="col-sm-8">
-                            <input type="text" class="form-control" id="log2" name="ข้าพเจ้า" readonly>
-
-                        </div>
-                    </div> -->
-
                     <!-- เลือกผู้ขออนุญาต -->
                     <div class="form-group row">
                         <label class="col-sm-4 col-form-label">ข้าพเจ้า</label>
                         <div class="col-sm-8">
                             <select type="number" class="form-control" id="" name="ข้าพเจ้า" required>
+                                <option value="">เลือกผู้ขออนุญาติใช้รถยนต์</option>
+                                <option value="นายอนุชิต ฉ่ำสิงห์">นายอนุชิต ฉ่ำสิงห์</option>
+                                <option value="นางสาวปรีดาวรรณ ไชยศรีชลธาร">นางสาวปรีดาวรรณ ไชยศรีชลธาร</option>
+                                <option value="นายปรีชา อานันท์รัตนกุล">นายปรีชา อานันท์รัตนกุล</option>
+                                <option value="นายจิรวัสส์ เจียตระกูล">นายจิรวัสส์ เจียตระกูล</option>
+                                <option value="นายปริญญวัฒน์ อยู่ทองอินทร์">นายปริญญวัฒน์ อยู่ทองอินทร์</option>
                                 <option value="นายคชธร อ่างบุญพงษ์">นายคชธร อ่างบุญพงษ์</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                                <option value="7">7</option>
-                                <option value="8">8</option>
-                                <option value="9">9</option>
-                                <option value="10">10</option>
-                                <option value="11">11</option>
-                                <option value="12">12</option>
-                                <option value="13">13</option>
-                                <option value="14">14</option>
-                                <option value="15">15</option>
+                                <option value="นายณัฐสิทธิ์ อยู่เย็น">นายณัฐสิทธิ์ อยู่เย็น</option>
+                                <option value="นายสุรชาติ ระย้าทองห">นายสุรชาติ ระย้าทอง</option>
                             </select>
                         </div>
                     </div>
@@ -118,11 +104,44 @@
                         <label class="col-sm-4 col-form-label">ใช้รถยนต์</label>
                         <div class="col-sm-8">
                             <select type="number" class="form-control" id="" name="ใช้รถยนต์" required>
-                                <option value="6056">กฆ-6056 (วีโก้)</option>
-                                <option value="2">ภฉ-4502</option>
-                                <option value="3">96-2706 (6ล้อ)</option>
-                                <option value="4">อย-2669 (รถตู้)</option>
+                                <option value="กฆ-6056">กฆ-6056 (วีโก้)</option>
+                                <option value="ภฉ-4502">ภฉ-4502</option>
+                                <option value="96-2706">96-2706 (6ล้อ)</option>
+                                <option value="อย-2669">อย-2669 (รถตู้)</option>
                             </select>
+                        </div>
+                    </div>
+
+                    <!-- สถานที่ -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">สถานที่</label>
+                        <div class="col-sm-8">
+                            <textarea type="text" class="form-control" id="ran2" name="สถานที่"
+                                placeholder=""></textarea>
+                        </div>
+                    </div>
+
+                    <!-- เหตุผล -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">เพื่อ(เหตุผล)</label>
+                        <div class="col-sm-8">
+                            <textarea type="text" class="form-control" id="ran3" name="เพื่อ" placeholder=""></textarea>
+
+                        </div>
+                    </div>
+
+                    <!-- ประเภทการใช้งาน -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">ประเภท</label>
+                        <div class="col-sm-8">
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="radio1" name="ประเภท" value="ใช้งานทั่วไป">
+                                <label class="form-check-label" for="radio1">ใช้งานทั่วไป</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="radio2" name="ประเภท" value="ไปราชการ">
+                                <label class="form-check-label" for="radio2">ไปราชการ</label>
+                            </div>
                         </div>
                     </div>
 
@@ -140,7 +159,12 @@
                         <label class="col-sm-4 col-form-label">เวลาเดินทาง</label>
                         <div class="col-sm-8">
                             <select type="number" class="form-control" id="" name="เวลาเดินทาง" required>
-                                <option value="08:30">08:30</option>
+                                <option value="09:00">06:00</option>
+                                <option value="09:30">06:30</option>
+                                <option value="09:00">07:00</option>
+                                <option value="09:30">07:30</option>
+                                <option value="09:00">08:00</option>
+                                <option value="09:30">08:30</option>
                                 <option value="09:00">09:00</option>
                                 <option value="09:30">09:30</option>
                                 <option value="10:00">10:00</option>
@@ -182,7 +206,12 @@
                         <label class="col-sm-4 col-form-label">เวลากลับ</label>
                         <div class="col-sm-8">
                             <select type="number" class="form-control" id="" name="เวลากลับ" required>
-                                <option value="08:30">08:30</option>
+                                <option value="09:00">06:00</option>
+                                <option value="09:30">06:30</option>
+                                <option value="09:00">07:00</option>
+                                <option value="09:30">07:30</option>
+                                <option value="09:00">08:00</option>
+                                <option value="09:30">08:30</option>
                                 <option value="09:00">09:00</option>
                                 <option value="09:30">09:30</option>
                                 <option value="10:00">10:00</option>
@@ -212,9 +241,9 @@
 
                     <!-- เลือกจำนวนคนนั่ง -->
                     <div class="form-group row">
-                        <label class="col-sm-4 col-form-label">มีคนนั่ง</label>
+                        <label class="col-sm-4 col-form-label">มีผู้นั่ง</label>
                         <div class="col-sm-8">
-                            <select type="number" class="form-control" id="" name="มีคนนั่ง" required>
+                            <select type="number" class="form-control" id="" name="มีผู้นั่ง" required>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -285,15 +314,18 @@
                         </div>
                     </div>
 
+                    <!-- ข้อความ -->
                     <p style="font-size:13px; color:red;"> *** การบันทึกข้อมูลจะใช้เวลาประมาณ 10
                         วินาที กรุณารอสักครู่เมื่อเสร็จแล้วจะมีข้อความแจ้งเตือน ***</p>
 
+                    <!-- ปุ่มบันทึกข้อมูล -->
                     <div class="col-12 mt-3">
                         <button id="" class="btn btn-success  btn-block " type="submit" name="submit"
                             style="margin-bottom: 5px;"><i class="fas fa-sign-out-alt"></i>
                             บันทึกข้อมูล</button>
                     </div>
 
+                    <!-- ปุ่มกลับหน้าเมนู -->
                     <div class="col-12 mt-3">
                         <a href="./home.html"><button class="btn btn-light btn-block " type="button"><i
                                     class="fa fa-bookmark"></i>
@@ -313,7 +345,7 @@
     <script src="dist/js/bootstrap.bundle.min.js"></script>
     <script src="plugins/jquery/jquery.min.js"></script>
 
-    <!-- CSS Datepicker-thai วันที่ไทย -->
+    <!-- CSS Datepicker-thai แสดงวันที่ไทย -->
     <script src="plugins/bootstrap-datepicker-thai/css/datepicker.css"></script>
     <script src="plugins/jquery/jquery.js"></script>
     <script src="plugins/bootstrap-datepicker-thai/js/bootstrap-datepicker.js"></script>
