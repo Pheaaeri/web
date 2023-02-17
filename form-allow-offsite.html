@@ -30,6 +30,8 @@
     <!-- Google Font: Source Sarabun -->
     <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@100;300;500;700&amp;display=swap"
         rel="stylesheet">
+    <!-- CSS Datepicker-thai วันที่ไทย -->
+    <link rel="stylesheet" href="plugins/bootstrap-datepicker-thai/css/datepicker.css">
 
 </head>
 
@@ -73,8 +75,8 @@
                     <div class="form-group row">
                         <label class="col-sm-4 col-form-label">เขียนวันที่</label>
                         <div class="col-sm-8">
-                            <input type="date" class="form-control" data-provide="datepicker" data-date-language="th-th"
-                                id="ran1" name="เขียนวันที่" placeholder="">
+                            <input type="text" class="form-control" id="ran1" name="เขียนวันที่"
+                                data-provide="datepicker" data-date-language="th-th" placeholder="01/01/2566" required>
 
                         </div>
                     </div>
@@ -99,7 +101,8 @@
                     <div class="form-group row">
                         <label class="col-sm-4 col-form-label">ในวันที่</label>
                         <div class="col-sm-8">
-                            <input type="date" class="form-control" id="ran4" name="ในวันที่" placeholder="">
+                            <input type="text" class="form-control" id="ran4" name="ในวันที่" data-provide="datepicker"
+                                data-date-language="th-th" placeholder="01/01/2566" required>
 
                         </div>
                     </div>
@@ -176,7 +179,7 @@
                             <!-- ทำเลือกชื่อผู้ใช้งาน -->
                             <select type="text" class="form-control" id="ran7" name="หัวหน้างาน" placeholder=""
                                 required="required">
-                                
+
                                 <option value="นายณัฐสิทธิ์ อยู่เย็น">นายณัฐสิทธิ์ อยู่เย็น</option>
                                 <option value="นางสาวปรีดาวรรณ ไชยศรีชลธาร">นางสาวปรีดาวรรณ ไชยศรีชลธาร</option>
                                 <option value="นายปรีชา อานันท์รัตนกุล">นายปรีชา อานันท์รัตนกุล</option>
@@ -192,7 +195,7 @@
                             <!-- ทำเลือกชื่อผู้ใช้งาน -->
                             <select type="text" class="form-control" id="ran8" name="ผู้อนุมัติ" placeholder=""
                                 required="required">
-                                
+
                                 <option value="นายอนุชิต ฉ่ำสิงห์">นายอนุชิต ฉ่ำสิงห์</option>
                                 <option value="นายณัฐสิทธิ์ อยู่เย็น">นายณัฐสิทธิ์ อยู่เย็น (รักษาการแทน)</option>
                                 <option value="นางสาวปรีดาวรรณ ไชยศรีชลธาร">นางสาวปรีดาวรรณ ไชยศรีชลธาร
@@ -342,6 +345,13 @@
         var userlog = localStorage.getItem("username")
         //console.log(userlog);
     </script>
+
+    <!-- CSS Datepicker-thai แสดงวันที่ไทย -->
+    <script src="plugins/bootstrap-datepicker-thai/css/datepicker.css"></script>
+    <script src="plugins/jquery/jquery.js"></script>
+    <script src="plugins/bootstrap-datepicker-thai/js/bootstrap-datepicker.js"></script>
+    <script src="plugins/bootstrap-datepicker-thai/js/bootstrap-datepicker-thai.js"></script>
+    <script src="plugins/bootstrap-datepicker-thai/js/locales/bootstrap-datepicker.th.js"></script>
 </body>
 
 </html>
