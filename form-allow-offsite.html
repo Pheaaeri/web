@@ -202,135 +202,32 @@
                                     (รักษาการแทน)</option>
                                 <option value="นายปรีชา อานันท์รัตนกุล">นายปรีชา อานันท์รัตนกุล (รักษาการแทน)
                                 </option>
-                                <option value="นายคชธร อ่างบุญพงษ์">นายคชธร อ่างบุญพงษ์ (รักษาการแทน)</option>
+                                <!-- <option value="นายคชธร อ่างบุญพงษ์">นายคชธร อ่างบุญพงษ์ (รักษาการแทน)</option> -->
                             </select>
                         </div>
                     </div>
 
+                    <!-- ทำเลือกชื่อผู้ใช้งาน -->
+                    <p style="font-size:13px; color:red;"> *** การบันทึกข้อมูลจะใช้เวลาประมาณ 10
+                        วินาที กรุณารอสักครู่เมื่อเสร็จแล้วจะมีข้อความแจ้งเตือน ***</p>
+
+                    <!-- ทำเลือกชื่อผู้ใช้งาน -->
                     <div class="col-12 mt-3">
-                        <button id="" class="btn btn-warning btn-block " onclick="checkformpopup()" type="button"
-                            name="FormleavesickButton" style="margin-bottom: 5px;" data-bs-target="#myModal"
-                            data-bs-toggle="modal"><i class="fas fa-sign-out-alt"></i>
-                            ส่งข้อมูล</button>
+                        <button id="" class="btn btn-success  btn-block " type="submit" name="submit"
+                            style="margin-bottom: 5px;"><i class="fas fa-sign-out-alt"></i>
+                            บันทึกข้อมูล</button>
                     </div>
 
-                    <!-- Modal HTML -->
-                    <div id="myModal" class="modal fade" data-bs-backdrop="static" tabindex="-1">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title">ยืนยันข้อมูล</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                                </div>
-
-                                <div class="modal-body">
-                                    <p style="color:red;">กรุณาตรวจสอบข้อมูลอีกครั้ง ก่อนกดบันทึกข้อมูล</p>
-
-                                    <div class="form-group row">
-                                        <label class="col-sm-4 col-form-label">ข้าพเจ้า</label>
-                                        <div class="col-sm-8">
-                                            <input type="text" class="form-control" id="rown0" name="-" placeholder=""
-                                                readonly>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group row">
-                                        <label class="col-sm-4 col-form-label">วันที่เขียน</label>
-                                        <div class="col-sm-8">
-                                            <input type="date" class="form-control" id="rown1" name="-" placeholder=""
-                                                readonly>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group row">
-                                        <label class="col-sm-4 col-form-label">เหตุผล</label>
-                                        <div class="col-sm-8">
-                                            <textarea type="text" class="form-control" id="rown2" name="-"
-                                                placeholder="" readonly>
-                                            </textarea>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group row">
-                                        <label class="col-sm-4 col-form-label">สถานที่</label>
-                                        <div class="col-sm-8">
-                                            <textarea type="text" class="form-control" id="rown3" name="-"
-                                                placeholder="" readonly>
-                                            </textarea>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group row">
-                                        <label class="col-sm-4 col-form-label">ในวันที่</label>
-                                        <div class="col-sm-8">
-                                            <input type="date" class="form-control" id="rown4" name="-" placeholder=""
-                                                readonly>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group row">
-                                        <label class="col-sm-4 col-form-label">ระหว่างเวลา</label>
-                                        <div class="col-sm-8">
-                                            <input type="text" class="form-control" id="rown5" name="-" placeholder=""
-                                                readonly>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group row">
-                                        <label class="col-sm-4 col-form-label">ถึงเวลา</label>
-                                        <div class="col-sm-8">
-                                            <input type="text" class="form-control" id="rown6" name="-" placeholder=""
-                                                readonly>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group row">
-                                        <label class="col-sm-4 col-form-label">หัวหน้างาน</label>
-                                        <div class="col-sm-8">
-                                            <input type="text" class="form-control" id="rown7" name="-" placeholder=""
-                                                readonly>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group row">
-                                        <label class="col-sm-4 col-form-label">ผู้อนุมัติ</label>
-                                        <div class="col-sm-8">
-                                            <input type="text" class="form-control" id="rown8" name="-" placeholder=""
-                                                readonly>
-                                        </div>
-                                    </div>
-
-                                    <div class="modal-footer">
-
-                                        <p style="font-size:13px; color:red;"> *** การบันทึกข้อมูลจะใช้เวลาประมาณ 10
-                                            วินาที กรุณารอสักครู่ เมื่อเสร็จแล้วจะมีข้อความแจ้งเตือน ***</p>
-
-                                        <button type="button" class="btn btn-secondary btn-block "
-                                            data-bs-dismiss="modal">แก้ไขข้อมูล</button>
-
-                                        <button id="" class="btn btn-success  btn-block " type="submit"
-                                            name="FormleavesickButton" style="margin-bottom: 3px;"><i
-                                                class="fas fa-sign-out-alt"></i>บันทึกข้อมูล</button>
-
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Modal HTML -->
-
-
+                    <!-- ทำเลือกชื่อผู้ใช้งาน -->
                     <div class="col-12 mt-3">
                         <a href="./home.html"><button class="btn btn-light btn-block " type="button"><i
-                                    class="fa fa-bookmark"></i> กลับหน้าเมนู </button></a>
+                                    class="fa fa-bookmark"></i>
+                                กลับหน้าเมนู </button></a>
                     </div>
-
+                </form>
             </div>
-            </form>
-        </div>
 
-    </div>
+        </div>
     </div>
     </div>
     <!-- link JS-->
