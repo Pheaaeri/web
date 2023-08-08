@@ -47,8 +47,8 @@
                 <!-- <h5> ลงชื่อเข้าใช้งานเรียบร้อย</h5> -->
                 <h6 id="name">Username</h6>
                 <h6>- - - - - - - - - - - - - - - - - - - - - - -</h6>
-                <h6 style="color:blue;">ผู้อำนวยการ(ผู้อนุมัติ) : นายจิรวัสส์ เจียตระกูล</h6>
-                <h6 style="color:blue;">รักษาการแทน</h6>
+                <h6 id="dname" style="color:blue;">ผู้อำนวยการ(ผู้อนุมัติ) :</h6>
+                <h6 id="ddeta" style="color:blue;">-</h6>
             </div>
 
 
@@ -125,14 +125,11 @@
                 window.location = "login.html"
             }
             else {
-                document.getElementById("name").innerHTML = "ผู้ใช้งาน : " + username
+                document.getElementById("name").innerHTML = "ผู้ใช้งาน // : " + username
+                document.getElementById("dname").innerHTML = "ผู้อำนวยการ(ผู้อนุมัติ) : นายจิรวัสส์ เจียตระกูล"
+                document.getElementById("ddeta").innerHTML = "รักษาการแทน"
             }
         }
-
-        // function headinput(){
-        //     var xhead = document.getElementById("headhome");
-        //     xhead.innerHTML = "test.html"
-        // }
 
     </script>
 
