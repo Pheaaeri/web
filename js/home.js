@@ -5,7 +5,7 @@ document.getElementById("logout").onclick = function(){
     window.location = "login.html"
 
 }
-//loadDataDirectorJSON();
+loadDataDirectorJSON();
 function loadDataDirectorJSON() {
 	var dataJSON = "https://script.google.com/macros/s/AKfycbyeUDT7e_0C4FMvoqtuu41ypXaOqPfoZqDGVyugEniQetUqHmD8hXLPFriLUlSOZt_TsQ/exec";
 	// get ค่าจาก url
@@ -16,17 +16,21 @@ function loadDataDirectorJSON() {
 
 	// แปลง string เป็น JSON
 	objPeople = JSON.parse(xmlHttp.responseText);
+    //
+    let dnameid = objPeople[0].dname
+    document.getElementById("dname").innerHTML = "ผู้อำนวยการ(ผู้อนุมัติ) : " + dnameid
+    //
+    let ddeatid = objPeople[0].ddeta
+    document.getElementById("ddeta").innerHTML = ddeatid
     
     //
-    let uidname = objPeople.find();
+    //let uidname = objPeople.find();
 
     //
-    let dnameid = uidname.dname
-    let uidname1 = document.getElementById("iddname");
-    uidname1.innerHTML = dnameid + " วัน";
+    //let dnameid = uidname.dname
+    //let uidname1 = document.getElementById("iddname");
+    //uidname1.innerHTML = dnameid + " วัน";
     //document.getElementById("lsday1").value = lsday
-
     
+    console.log(ddeatid);
 }
-
-console.log(objPeople);
