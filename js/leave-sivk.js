@@ -52,8 +52,14 @@ function apilsday() {
 
     //ลากิจไปแล้ว
     let lssum = uid.swuser2
-    let lswuser2 = document.getElementById("swuser2");
+    let swuser2 = document.getElementById("swuser2");
     swuser2.innerHTML = lssum + " วัน";
+    // document.getElementById("lsday3").value = lssum
+
+    //รวมวัน
+    var sumlsday = uid.swuser1 * 1 + uid.swuser2 * 1
+    let swuser3 = document.getElementById("swuser3");
+    swuser3.innerHTML = sumlsday + " วัน";
     // document.getElementById("lsday3").value = lssum
     //console.log(lssum);
 }
