@@ -68,7 +68,7 @@
                             <th scope="row">รวม</th>
                             <td align="right" id="swuser3">- วัน</td>
                         </tr>
-                    </tbody>                   
+                    </tbody>
                 </table>
                 <br>
                 <p style="font-size:13px; color:red;"> * ข้าราชการ มีวันลารวมกัน ไม่เกิน 45 วัน</p>
@@ -161,11 +161,11 @@
                     <div class="form-group row">
                         <label class="col-sm-4 col-form-label">ผู้ตรวจสอบ</label>
                         <div class="col-sm-8">
-                            <!-- ทำเลือกชื่อผู้ใช้งาน -->
+                            <!-- ทำเลือกชื่อผู้ผู้ตรวจสอบ-->
                             <select type="text" class="form-control" id="ran7" name="ผู้ตรวจสอบ" placeholder=""
                                 required="required">
                                 <option value="นายณัฐสิทธิ์ อยู่เย็น">นายณัฐสิทธิ์ อยู่เย็น</option>
-                                <option value="นายอนุชิต ฉ่ำสิงห์">นายอนุชิต ฉ่ำสิงห์</option>
+                             <!--   <option value="นายอนุชิต ฉ่ำสิงห์">นายอนุชิต ฉ่ำสิงห์</option> -->
 
                             </select>
                         </div>
@@ -177,29 +177,31 @@
                             <!-- ทำเลือกชื่อผู้ใช้งาน -->
                             <select type="text" class="form-control" id="ran8" name="ผู้อนุมัติ" placeholder=""
                                 required="required">
+                                <!-- ปฏิบัติราชการแทน -->
+                                <!--  <option value="นายอนุชิต ฉ่ำสิงห์">นายอนุชิต ฉ่ำสิงห์</option> 
                                 <option value="ป-นางสาวปรีดาวรรณ ไชยศรีชลธาร">นางสาวปรีดาวรรณ
                                     ไชยศรีชลธาร (ปฏิบัติราชการแทน)</option>
                                 <option value="ป-นายปรีชา อานันท์รัตนกุล">นายปรีชา อานันท์รัตนกุล (ปฏิบัติราชการแทน)
                                 </option>
-                                <!--<option value="ป-นายจิรวัสส์ เจียตระกูล">นายจิรวัสส์ เจียตระกูล (ปฏิบัติราชการแทน)
-                                </option> -->
+                                <option value="ป-นายจิรวัสส์ เจียตระกูล">นายจิรวัสส์ เจียตระกูล (ปฏิบัติราชการแทน) 
+                                </option>
                                 <option value="ป-นายปริญญวัฒน์ อยู่ทองอินทร์">นายปริญญวัฒน์
                                     อยู่ทองอินทร์ (ปฏิบัติราชการแทน)</option>
                                 <option value="ป-นายคชธร อ่างบุญพงษ์">นายคชธร อ่างบุญพงษ์ (ปฏิบัติราชการแทน)</option>
                                 <option value="ป-นายณัฐสิทธิ์ อยู่เย็น">นายณัฐสิทธิ์ อยู่เย็น (ปฏิบัติราชการแทน)
-                                </option>
-                                <!-- <option value="ป-นายสุรชาติ ระย้าทอง">สุรชาติ ระย้าทอง (ปฏิบัติราชการแทน)</option>
-                                <option value="ร-นางสาวปรีดาวรรณ ไชยศรีชลธาร">นางสาวปรีดาวรรณ ไชยศรีชลธาร (รักษาการแทน)
-                                </option> -->
+                                </option> 
+                                <option value="ป-นายสุรชาติ ระย้าทอง">สุรชาติ ระย้าทอง (ปฏิบัติราชการแทน)</option> -->
+                                <!-- รักษาการแทน -->
                                 <option value="ร-นายปรีชา อานันท์รัตนกุล">นายปรีชา อานันท์รัตนกุล (รักษาการแทน)</option>
+                                <option value="ร-นางสาวปรีดาวรรณ ไชยศรีชลธาร">นางสาวปรีดาวรรณ ไชยศรีชลธาร (รักษาการแทน)
+                                </option>
                                 <!-- <option value="ร-นายจิรวัสส์ เจียตระกูล">นายจิรวัสส์ เจียตระกูล (รักษาการแทน)</option> -->
                                 <option value="ร-นายปริญญวัฒน์ อยู่ทองอินทร์">นายปริญญวัฒน์ อยู่ทองอินทร์ (รักษาการแทน)
                                 </option>
                                 <option value="ร-นายคชธร อ่างบุญพงษ์">นายคชธร อ่างบุญพงษ์ (รักษาการแทน)</option>
                                 <option value="ร-นายณัฐสิทธิ์ อยู่เย็น">นายณัฐสิทธิ์ อยู่เย็น (รักษาการแทน)</option>
-                                <!-- <option value="ร-นายสุรชาติ ระย้าทอง">สุรชาติ ระย้าทอง (รักษาการแทน)</option>--> 
-                                <option value="นายวุฒิพล จันทร์สระคู">นายวุฒิพล จันทร์สระคู(ผู้อำนวยการสถาบันวิจัยเกษตรวิศวกรรม)</option>
-
+                                <!-- <option value="ร-นายสุรชาติ ระย้าทอง">สุรชาติ ระย้าทอง (รักษาการแทน)</option> -->
+                                <!-- <option value="นายวุฒิพล จันทร์สระคู">นายวุฒิพล จันทร์สระคู(ผู้อำนวยการสถาบันวิจัยเกษตรวิศวกรรม)</option> -->
                             </select>
                         </div>
                     </div>
@@ -231,8 +233,9 @@
     <script src="plugins/jquery/jquery.min.js"></script>
 
     <!-- CSS Datepicker-thai แสดงวันที่ไทย -->
-    <script src="plugins/bootstrap-datepicker-thai/css/datepicker.css"></script>
     <script src="plugins/jquery/jquery.js"></script>
+
+    <script src="plugins/bootstrap-datepicker-thai/css/datepicker.css"></script>
     <script src="plugins/bootstrap-datepicker-thai/js/bootstrap-datepicker.js"></script>
     <script src="plugins/bootstrap-datepicker-thai/js/bootstrap-datepicker-thai.js"></script>
     <script src="plugins/bootstrap-datepicker-thai/js/locales/bootstrap-datepicker.th.js"></script>

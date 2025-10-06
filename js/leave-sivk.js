@@ -29,7 +29,7 @@ function loaddatalsday() {
 }
 
 apilsday();
-//Function รับข้อมูล-ข้อมูลประวัติวันลาพักผ่อน
+//Function รับข้อมูล-แสดงข้อมูลประวัติวันลาพักผ่อน
 function apilsday() {
     let ulname = localStorage.getItem("username")
     let uid = objPeople.find((value) => { return (value.username == ulname) });
@@ -64,7 +64,7 @@ function apilsday() {
     //console.log(lssum);
 }
 
-//Function ส่งข้อมูล
+//Function ส่งข้อมูล-บันทึกข้อมูล
 leavesick();
 function leavesick() {
     const scriptURL = 'https://script.google.com/macros/s/AKfycbyq31gYJPqvDXgGECjPCN-R4Qu_AL4ZawpG_9hYjjz6Q_kP-WfZlKtSPg2LbJ2ObNIJFw/exec'
