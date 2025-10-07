@@ -12,42 +12,37 @@
     <link rel="shortcut icon">
 
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
     <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+    <!-- <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css"> -->
 
     <!-- DataTables -->
-    <link rel="stylesheet" href="plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
-    <link rel="stylesheet" href="plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+    <!-- <link rel="stylesheet" href="plugins/datatables-bs4/css/dataTables.bootstrap4.min.css"> -->
+    <!-- <link rel="stylesheet" href="plugins/datatables-responsive/css/responsive.bootstrap4.min.css"> -->
+
     <!-- Select2 -->
-    <link rel="stylesheet" href="plugins/select2/css/select2.min.css" />
-    <link rel="stylesheet" href="plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css" />
+    <link rel="stylesheet" href="plugins/select2/css/sweetalert2.min.css" />
+    <link rel="stylesheet" href="plugins/select2/css/sweetalert2.css" />
+    <script src="plugins/select2/js/sweetalert2.all.min.js"></script>
+    <script src="plugins/select2/js/sweetalert2.all.js"></script>
+
+    <!-- <link rel="stylesheet" href="plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css" /> -->
+
     <!-- Theme style -->
     <link rel="stylesheet" href="dist/css/adminlte.css">
     <link rel="stylesheet" href="dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css"> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script> -->
+
     <!-- Google Font: Source Sarabun -->
     <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@100;300;500;700&amp;display=swap"
         rel="stylesheet">
+
 </head>
 
 <body class="hold-transition login-page"
     style="background-repeat: no-repeat; background-size: cover; background-position: center center;">
-
-    <script>
-        //Swal.fire("SweetAlert2 is working!");
-        function Loading() {
-            setTimeout(function () {
-                swal({
-                    title: "นายปรีชา อานันท์รัตนกุล",
-                    text: "รักษาการในตำแหน่ง ผู้อำนวยการกลุ่มวิจัยวิศวกรรมหลังการเก็บเกี่ยวและแปรรูป",
-                    showConfirmButton: true //ปิดการแสดงปุ่มคอนเฟิร์ม ถ้าแก้เป็น true จะแสดงปุ่ม ok ให้คลิกเหมือนเดิม
-                    //type: "success",
-                })
-            });
-        };
-
-    </script>
 
     <!-- Class ลงชื่อเข้าใช้งาน -->
     <div class="login-box">
@@ -65,10 +60,6 @@
                 <h6 id="dname" style="color:blue;">ผู้อำนวยการ(ผู้อนุมัติ) :</h6>
                 <h6 id="ddeta" style="color:blue;">-</h6>
             </div>
-
-
-
-
 
             <div class="card-body login-card-body">
                 <form method="post">
@@ -88,7 +79,6 @@
                                     </i> ใบลาพักผ่อน </button></a>
                         </div>
 
-
                         <div class="col-12 mt-3">
                             <a href="form-allow-offsite.html"><button class="btn btn-secondary btn-block" type="button">
                                     </i> ใบขออนุญาตออกนอกสถานที่ </button></a>
@@ -105,7 +95,6 @@
                         </div>
                         <!--//icon //<i class="fas fa-receipt"></i> //-->
 
-
                         <!--
                         <div class="col-12 mt-3">
                             <a href="index.html"><button class="btn btn-light btn-block " type="button"><i
@@ -119,9 +108,6 @@
                                 ออกจากระบบ</button>
                         </div>
 
-
-
-
                     </div>
                 </form>
             </div>
@@ -130,9 +116,15 @@
     </div>
     </div>
 
-    <script>
-        checkLogin();
+    <!-- **** -->
+    <script src="js/home.js"></script>
 
+    <!-- **** -->
+    <script>
+        Loading(); //********
+        checkLogin(); //********
+
+        //
         function checkLogin() {
             var username = localStorage.getItem("username")
             if (!username) {
@@ -142,29 +134,29 @@
                 document.getElementById("name").innerHTML = "ผู้ใช้งาน : " + username
             }
         }
-
     </script>
 
-    <script src="js/home.js"></script>
 
 
 
-    <script src="dist/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="dist/js/bootstrap.bundle.min.js"></script> -->
+
     <!-- CSS Datepicker-thai แสดงวันที่ไทย -->
-    <script src="plugins/jquery/jquery.js"></script>
+    <!-- <script src="plugins/jquery/jquery.js"></script> -->
 
-
-
+    <!-- **** -->
     <script src="dist/js/adminlte.min.js"></script>
     <script src="plugins/jquery/jquery.min.js"></script>
-    <!--
-    <script src="plugins/select2/sweetalert2.all.js"></script>
-    <script src="plugins/select2/sweetalert2.all.min.js"></script>
-    -->
+
+    <!-- **** -->
+    <!-- <script src="plugins/select2/sweetalert2.all.js"></script> -->
+    <!-- <script src="plugins/select2/sweetalert2.all.min.js"></script> -->
+
+    <!-- Run Script Sweetalert -->
     <script>
         //var userlog = localStorage.getItem("username")
         //console.log(userlog);
-        Loading();
+
     </script>
 </body>
 
