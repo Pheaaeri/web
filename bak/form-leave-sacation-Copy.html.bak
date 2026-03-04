@@ -160,7 +160,8 @@
                     <div class="form-group row">
                         <label class="col-sm-4 col-form-label">ผู้อนุมัติ</label>
                         <div class="col-sm-8">
-                            <select type="text" class="form-control" id="approverSelect" name="ผู้อนุมัติ" required="required">
+                            <select type="text" class="form-control" id="approverSelect" name="ผู้อนุมัติ"
+                                required="required">
                                 <option value="นายเวียง อากรชี">นายเวียง อากรชี (ผอ.)</option>
                                 <!-- ปฏิบัติราชการแทน -->
                                 <!--  <option value="นายอนุชิต ฉ่ำสิงห์">นายอนุชิต ฉ่ำสิงห์</option> 
@@ -177,11 +178,15 @@
                                 </option> 
                                 <option value="ป-นายสุรชาติ ระย้าทอง">สุรชาติ ระย้าทอง (ปฏิบัติราชการแทน)</option> -->
                                 <!-- รักษาการแทน -->
-                                <option value="ร-นายปรีชา อานันท์รัตนกุล">นายปรีชา อานันท์รัตนกุล (รักษาราชการแทน)</option>
-                                <option value="ร-นางสาวปรีดาวรรณ ไชยศรีชลธาร">นางสาวปรีดาวรรณ ไชยศรีชลธาร (รักษาราชการแทน)
+                                <option value="ร-นายปรีชา อานันท์รัตนกุล">นายปรีชา อานันท์รัตนกุล (รักษาราชการแทน)
                                 </option>
-                                <option value="ร-นายจิรวัสส์ เจียตระกูล">นายจิรวัสส์ เจียตระกูล (รักษาราชการแทน)</option>
-                                <option value="ร-นายปริญญวัฒน์ อยู่ทองอินทร์">นายปริญญวัฒน์ อยู่ทองอินทร์ (รักษาราชการแทน)
+                                <option value="ร-นางสาวปรีดาวรรณ ไชยศรีชลธาร">นางสาวปรีดาวรรณ ไชยศรีชลธาร
+                                    (รักษาราชการแทน)
+                                </option>
+                                <option value="ร-นายจิรวัสส์ เจียตระกูล">นายจิรวัสส์ เจียตระกูล (รักษาราชการแทน)
+                                </option>
+                                <option value="ร-นายปริญญวัฒน์ อยู่ทองอินทร์">นายปริญญวัฒน์ อยู่ทองอินทร์
+                                    (รักษาราชการแทน)
                                 </option>
                                 <option value="ร-นายคชธร อ่างบุญพงษ์">นายคชธร อ่างบุญพงษ์ (รักษาราชการแทน)</option>
                                 <option value="ร-นายณัฐสิทธิ์ อยู่เย็น">นายณัฐสิทธิ์ อยู่เย็น (รักษาราชการแทน)</option>
@@ -215,14 +220,78 @@
 
     <!-- link JS-->
     <script src="js/leave-sacation.js"></script>
-    <!-- link JS approverselectname แก้ไข้ชื่อผู้อนุมัติ : รักษาการ/ปปฏิบัติราชการ แบบดึงข้อมูลหน้า Home Data04/03/2569-->
-    <script src="js/approverselectname.js"></script>
-    <!-- link JS WebUI -->
+
+    <script>
+        loadDataDirectorJSON();
+        function loadDataDirectorJSON() {
+            var dataJSON = "https://script.google.com/macros/s/AKfycbyeUDT7e_0C4FMvoqtuu41ypXaOqPfoZqDGVyugEniQetUqHmD8hXLPFriLUlSOZt_TsQ/exec";
+            // get ค่าจาก url
+            var xmlHttp = new XMLHttpRequest();
+            xmlHttp.open("GET", dataJSON, false); // false for synchronous request
+            xmlHttp.send(null);
+            obj = xmlHttp.responseText;
+
+            // แปลง string เป็น JSON
+            objPeople = JSON.parse(xmlHttp.responseText);
+            //ชื่อผู้อำนวยการ
+            let dnameid = objPeople[0].dname
+            //document.getElementById("dname").innerHTML = "ผู้อำนวยการ(ผู้อนุมัติ) : " + dnameid
+            //ตำแหน่งผู้อำนวยการ
+            let ddeatid = objPeople[0].ddeta
+            //document.getElementById("ddeta").innerHTML = ddeatid
+
+
+            //
+            //let uidname = objPeople.find();
+
+            //
+            //let dnameid = uidname.dname
+            //let uidname1 = document.getElementById("iddname");
+            //uidname1.innerHTML = dnameid + " วัน";
+            //document.getElementById("lsday1").value = lsday
+
+            //console.log(ddeatid);
+
+            document.addEventListener("DOMContentLoaded", function () {
+                // 1. รับค่าชื่อคนที่ปฏิบัติหน้าที่ในวันนี้ (ค่านี้ควรดึงมาจาก Database หรือ Session ของระบบ)
+                // สมมติว่าวันนี้ระบบส่งค่ามาว่า "นายปรีชา" เป็นคนรักษาการ
+                //var activeApproverName = "นายปรีชา อานันท์รัตนกุล";
+
+                // *หมายเหตุ: ในการใช้งานจริง ค่า activeApproverName ต้องดึงมาจากตัวแปร PHP หรือ Server
+                // เช่น: var activeApproverName = "<?php echo $current_acting_director_name; ?>";
+
+                var selectBox = document.getElementById("approverSelect");
+                var options = selectBox.options;
+
+                // 2. วนลูปหา Option ที่มีชื่อตรงกับคนปฏิบัติหน้าที่
+                for (var i = 0; i < options.length; i++) {
+                    // เช็คว่าข้อความใน Option มีชื่อคนนั้นอยู่ไหม (ใช้ includes เพื่อกันเรื่องวรรคตอน)
+                    //ดึงมาจาก Database 
+                    if (options[i].text.includes(dnameid)) {
+
+                        // 3. ย้าย Option นั้นไปเป็นอันดับแรก (index 0)
+                        var targetOption = options[i];
+                        selectBox.remove(i); // ลบจากที่เดิม
+                        selectBox.add(targetOption, selectBox.options[0]); // แทรกไปที่ตำแหน่งแรก
+
+                        // 4. สั่งให้เลือกชื่อนี้เป็นค่าเริ่มต้น (Selected)
+                        selectBox.selectedIndex = 0;
+                        break; // เจอแล้วจบการทำงาน
+                    }
+                }
+            });
+        }
+
+    </script>
+
+
+
+    <!-- link *********** -->
     <script src="dist/js/sweetalert.min.js"></script>
     <script src="dist/js/adminlte.min.js"></script>
     <script src="dist/js/bootstrap.bundle.min.js"></script>
     <script src="plugins/jquery/jquery.min.js"></script>
-    <!-- link JS Plugins -->
+
     <script src="plugins/bootstrap-datepicker-thai/css/datepicker.css"></script>
     <script src="plugins/jquery/jquery.js"></script>
     <script src="plugins/bootstrap-datepicker-thai/js/bootstrap-datepicker.js"></script>

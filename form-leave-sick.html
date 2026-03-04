@@ -175,7 +175,7 @@
                         <label class="col-sm-4 col-form-label">ผู้อนุมัติ</label>
                         <div class="col-sm-8">
                             <!-- ทำเลือกชื่อผู้ใช้งาน -->
-                            <select type="text" class="form-control" id="ran8" name="ผู้อนุมัติ" placeholder=""
+                            <select type="text" class="form-control" id="approverSelect" name="ผู้อนุมัติ" placeholder=""
                                 required="required">
                                 <!-- ปฏิบัติราชการแทน -->
                                 <option value="นายเวียง อากรชี">นายเวียง อากรชี (ผอ.)</option>
@@ -193,11 +193,15 @@
                                 </option> 
                                 <option value="ป-นายสุรชาติ ระย้าทอง">สุรชาติ ระย้าทอง (ปฏิบัติราชการแทน)</option> -->
                                 <!-- รักษาการแทน -->
-                                <option value="ร-นายปรีชา อานันท์รัตนกุล">นายปรีชา อานันท์รัตนกุล (รักษาราชการแทน)</option>
-                                <option value="ร-นางสาวปรีดาวรรณ ไชยศรีชลธาร">นางสาวปรีดาวรรณ ไชยศรีชลธาร (รักษาราชการแทน)
+                                <option value="ร-นายปรีชา อานันท์รัตนกุล">นายปรีชา อานันท์รัตนกุล (รักษาราชการแทน)
                                 </option>
-                                <option value="ร-นายจิรวัสส์ เจียตระกูล">นายจิรวัสส์ เจียตระกูล (รักษาราชการแทน)</option>
-                                <option value="ร-นายปริญญวัฒน์ อยู่ทองอินทร์">นายปริญญวัฒน์ อยู่ทองอินทร์ (รักษาราชการแทน)
+                                <option value="ร-นางสาวปรีดาวรรณ ไชยศรีชลธาร">นางสาวปรีดาวรรณ ไชยศรีชลธาร
+                                    (รักษาราชการแทน)
+                                </option>
+                                <option value="ร-นายจิรวัสส์ เจียตระกูล">นายจิรวัสส์ เจียตระกูล (รักษาราชการแทน)
+                                </option>
+                                <option value="ร-นายปริญญวัฒน์ อยู่ทองอินทร์">นายปริญญวัฒน์ อยู่ทองอินทร์
+                                    (รักษาราชการแทน)
                                 </option>
                                 <option value="ร-นายคชธร อ่างบุญพงษ์">นายคชธร อ่างบุญพงษ์ (รักษาราชการแทน)</option>
                                 <option value="ร-นายณัฐสิทธิ์ อยู่เย็น">นายณัฐสิทธิ์ อยู่เย็น (รักษาราชการแทน)</option>
@@ -227,11 +231,14 @@
         </div>
     </div>
     </div>
+    <!-- link JS approverselectname แก้ไข้ชื่อผู้อนุมัติ : รักษาการ/ปปฏิบัติราชการ แบบดึงข้อมูลหน้า Home Data04/03/2569-->
+    <script src="js/approverselectname.js"></script>
     <!-- link JS-->
     <script src="js/leave-sivk.js"></script>
     <script src="dist/js/adminlte.min.js"></script>
     <script src="dist/js/bootstrap.bundle.min.js"></script>
     <script src="plugins/jquery/jquery.min.js"></script>
+
 
     <!-- CSS Datepicker-thai แสดงวันที่ไทย -->
     <script src="plugins/jquery/jquery.js"></script>
